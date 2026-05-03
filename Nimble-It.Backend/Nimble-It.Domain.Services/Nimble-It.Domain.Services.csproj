@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\Nimble-It.Domain.Models\Nimble-It.Domain.Models.csproj" />
+    <ProjectReference Include="..\Nimble-It.Api.Contracts\Nimble-It.Api.Contracts.csproj" />
+    <ProjectReference Include="..\Nimble-It.Persistence\Nimble-It.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.26.0" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>Nimble_It.Domain.Services</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+</Project>

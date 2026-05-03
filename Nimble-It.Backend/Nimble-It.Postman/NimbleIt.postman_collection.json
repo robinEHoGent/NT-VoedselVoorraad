@@ -1,0 +1,3863 @@
+{
+	"info": {
+		"_postman_id": "5fb6d850-2d3e-4278-8131-62f90550e2a1",
+		"name": "NimbleIt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48816914"
+	},
+	"item": [
+		{
+			"name": "Recipe",
+			"item": [
+				{
+					"name": "GetCookableNumber",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/recipe/Cookable/false",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"recipe",
+								"Cookable",
+								"false"
+							]
+						},
+						"description": "\\-> Ok"
+					},
+					"response": [
+						{
+							"name": "GetCookableCount (true)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/Cookable/true",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"Cookable",
+										"true"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:07:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"count\": 21\n}"
+						},
+						{
+							"name": "GetCookableCount (false)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/Cookable/false",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"Cookable",
+										"false"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:10:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"count\": 79\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAllAsync",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&isCookable=true",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"recipe"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "amountPage",
+									"value": "4"
+								},
+								{
+									"key": "isCookable",
+									"value": "true"
+								}
+							]
+						},
+						"description": "Success -> Ok\n\nNull -> NotFound\n\nException -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "GetCookableRecipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&isCookable=true",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "amountPage",
+											"value": "4"
+										},
+										{
+											"key": "isCookable",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:11:30 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"recipeId\": 4,\n        \"name\": \"Banana Pancakes\",\n        \"description\": \"Fluffy breakfast pancakes with fresh bananas and cinnamon.\",\n        \"image\": null,\n        \"cookable\": null\n    },\n    {\n        \"recipeId\": 5,\n        \"name\": \"Cheesy Omelette\",\n        \"description\": \"Simple, classic omelette with melted cheese and butter.\",\n        \"image\": null,\n        \"cookable\": null\n    },\n    {\n        \"recipeId\": 15,\n        \"name\": \"Caesar Salad\",\n        \"description\": \"Classic Caesar salad with romaine, croutons, and homemade dressing.\",\n        \"image\": null,\n        \"cookable\": null\n    },\n    {\n        \"recipeId\": 21,\n        \"name\": \"Egg Fried Rice\",\n        \"description\": \"Quick egg fried rice with vegetables, ideal for leftovers.\",\n        \"image\": null,\n        \"cookable\": null\n    }\n]"
+						},
+						{
+							"name": "GetNotCookableRecipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&isCookable=false",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "amountPage",
+											"value": "4"
+										},
+										{
+											"key": "isCookable",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:12:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"recipeId\": 1,\n        \"name\": \"Spaghetti Bolognese\",\n        \"description\": \"Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.\",\n        \"image\": null,\n        \"cookable\": null\n    },\n    {\n        \"recipeId\": 2,\n        \"name\": \"Greek Salad\",\n        \"description\": \"Fresh Mediterranean salad with feta cheese and olives.\",\n        \"image\": null,\n        \"cookable\": null\n    },\n    {\n        \"recipeId\": 3,\n        \"name\": \"Chicken Stir Fry\",\n        \"description\": \"Quick and easy Asian-inspired chicken with colorful vegetables.\",\n        \"image\": null,\n        \"cookable\": null\n    },\n    {\n        \"recipeId\": 6,\n        \"name\": \"Vegetable Soup\",\n        \"description\": \"Light, comforting vegetable soup with a clear broth.\",\n        \"image\": null,\n        \"cookable\": null\n    }\n]"
+						},
+						{
+							"name": "GetFilteredRecipesByName",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&name=pasta",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "amountPage",
+											"value": "4"
+										},
+										{
+											"key": "name",
+											"value": "pasta"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:12:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"recipeId\": 7,\n        \"name\": \"Pasta Salad\",\n        \"description\": \"Cold pasta salad with fresh chopped veggies and a light vinaigrette.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 8,\n        \"name\": \"Tomato Pasta\",\n        \"description\": \"Simple pasta with fresh tomato sauce and basil.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 18,\n        \"name\": \"Pasta Carbonara\",\n        \"description\": \"Traditional Italian pasta with eggs, cheese, cured pork, and black pepper.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 23,\n        \"name\": \"Veggie Pasta\",\n        \"description\": \"Light pasta dish tossed with seasonal fresh vegetables.\",\n        \"image\": null,\n        \"cookable\": false\n    }\n]"
+						},
+						{
+							"name": "GetFilteredRecipesByTags",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&tag=Italian&tag=Pasta",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "amountPage",
+											"value": "4"
+										},
+										{
+											"key": "tag",
+											"value": "Italian"
+										},
+										{
+											"key": "tag",
+											"value": "Pasta"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:13:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"recipeId\": 1,\n        \"name\": \"Spaghetti Bolognese\",\n        \"description\": \"Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 8,\n        \"name\": \"Tomato Pasta\",\n        \"description\": \"Simple pasta with fresh tomato sauce and basil.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 18,\n        \"name\": \"Pasta Carbonara\",\n        \"description\": \"Traditional Italian pasta with eggs, cheese, cured pork, and black pepper.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 78,\n        \"name\": \"Pasta Carbonara Bowl\",\n        \"description\": \"Carbonara-style pasta served in a bowl.\",\n        \"image\": null,\n        \"cookable\": false\n    }\n]"
+						},
+						{
+							"name": "GetFilteredRecipesByFavorite",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&favorite=true",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "amountPage",
+											"value": "4"
+										},
+										{
+											"key": "favorite",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:14:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"recipeId\": 1,\n        \"name\": \"Spaghetti Bolognese\",\n        \"description\": \"Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 2,\n        \"name\": \"Greek Salad\",\n        \"description\": \"Fresh Mediterranean salad with feta cheese and olives.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 5,\n        \"name\": \"Cheesy Omelette\",\n        \"description\": \"Simple, classic omelette with melted cheese and butter.\",\n        \"image\": null,\n        \"cookable\": true\n    },\n    {\n        \"recipeId\": 9,\n        \"name\": \"Fried Rice\",\n        \"description\": \"Classic Asian fried rice with vegetables and egg.\",\n        \"image\": null,\n        \"cookable\": false\n    }\n]"
+						},
+						{
+							"name": "GetCookableRecipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?name=pasta&tag=pasta&favorite=true&countOnly=true&page=1+",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "pasta"
+										},
+										{
+											"key": "tag",
+											"value": "pasta"
+										},
+										{
+											"key": "favorite",
+											"value": "true"
+										},
+										{
+											"key": "countOnly",
+											"value": "true"
+										},
+										{
+											"key": "page",
+											"value": "1+"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:14:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "4"
+						},
+						{
+							"name": "GetCountFilteredRecipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?name=pasta&tag=pasta&countOnly=true",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "pasta"
+										},
+										{
+											"key": "tag",
+											"value": "pasta"
+										},
+										{
+											"key": "countOnly",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:15:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "16"
+						},
+						{
+							"name": "GetRecipes (null)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&name=testnull",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "amountPage",
+											"value": "4"
+										},
+										{
+											"key": "name",
+											"value": "testnull"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:16:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[]"
+						},
+						{
+							"name": "GetCookableRecipes (exception)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe?page=1&amountPage=4&isCookable=true&name=pasta",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									],
+									"query": [
+										{
+											"key": "page",
+											"value": "1"
+										},
+										{
+											"key": "amountPage",
+											"value": "4"
+										},
+										{
+											"key": "isCookable",
+											"value": "true"
+										},
+										{
+											"key": "name",
+											"value": "pasta"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:17:37 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"traceId\": \"00-724758db0adb857f2be0221c4ad2102e-9006b8639585459f-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetAsync",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/recipe/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"recipe",
+								"1"
+							]
+						},
+						"description": "Success -> Ok\n\nNull -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "GetRecipeById",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:19:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"recipeId\": 1,\n    \"name\": \"Spaghetti Bolognese\",\n    \"description\": \"Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.\",\n    \"image\": null,\n    \"tags\": [\n        {\n            \"id\": 10,\n            \"name\": \"Italian\"\n        },\n        {\n            \"id\": 11,\n            \"name\": \"Pasta\"\n        },\n        {\n            \"id\": 3,\n            \"name\": \"Dinner\"\n        },\n        {\n            \"id\": 6,\n            \"name\": \"Medium\"\n        },\n        {\n            \"id\": 9,\n            \"name\": \"Long\"\n        }\n    ],\n    \"servingSize\": 4,\n    \"complexity\": 2,\n    \"prepareTime\": 45,\n    \"parts\": [\n        {\n            \"partId\": 1,\n            \"title\": \"Bolognese\",\n            \"products\": [\n                {\n                    \"amount\": 0.5,\n                    \"productId\": 8,\n                    \"productName\": \"Ground Beef\",\n                    \"uomName\": \"kg\",\n                    \"imageUrl\": null\n                },\n                {\n                    \"amount\": 5,\n                    \"productId\": 6,\n                    \"productName\": \"Tomatoes\",\n                    \"uomName\": \"Pieces\",\n                    \"imageUrl\": null\n                },\n                {\n                    \"amount\": 2,\n                    \"productId\": 1,\n                    \"productName\": \"Paprika\",\n                    \"uomName\": \"Pieces\",\n                    \"imageUrl\": null\n                }\n            ]\n        },\n        {\n            \"partId\": 2,\n            \"title\": \"Spaghetti\",\n            \"products\": [\n                {\n                    \"amount\": 0.4,\n                    \"productId\": 15,\n                    \"productName\": \"Pasta\",\n                    \"uomName\": \"kg\",\n                    \"imageUrl\": null\n                }\n            ]\n        }\n    ],\n    \"instructions\": [\n        {\n            \"id\": 1,\n            \"step\": 1,\n            \"header\": \"Prepare sauce\",\n            \"text\": \"Brown the ground beef in a large pan over medium heat.\"\n        },\n        {\n            \"id\": 2,\n            \"step\": 2,\n            \"header\": \"Add vegetables\",\n            \"text\": \"Chop tomatoes and paprika, add to the beef and simmer for 20 minutes.\"\n        },\n        {\n            \"id\": 3,\n            \"step\": 3,\n            \"header\": \"Cook pasta\",\n            \"text\": \"Boil pasta according to package instructions, drain and serve with sauce.\"\n        }\n    ],\n    \"createdOn\": \"19/12/2025\",\n    \"lastCooked\": \"24/12/2025\",\n    \"favorite\": true\n}"
+						},
+						{
+							"name": "GetRecipeById (notfound)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"10000"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:19:34 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"traceId\": \"00-03a5ae4b108784fd17ffec9de58d6dba-2ee1c4f67839f587-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetLastCookedRecipes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/recipe/Last-cooked?amountPage=8",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"recipe",
+								"Last-cooked"
+							],
+							"query": [
+								{
+									"key": "amountPage",
+									"value": "8"
+								}
+							]
+						},
+						"description": "Success -> Ok\n\nNull -> NotFound (enkel als er geen recepten zijn met lastcooked datum)"
+					},
+					"response": [
+						{
+							"name": "GetLastCookedRecipes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/Last-cooked?amountPage=8",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"Last-cooked"
+									],
+									"query": [
+										{
+											"key": "amountPage",
+											"value": "8"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:20:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"recipeId\": 5,\n        \"name\": \"Cheesy Omelette\",\n        \"description\": \"Simple, classic omelette with melted cheese and butter.\",\n        \"image\": null,\n        \"cookable\": true\n    },\n    {\n        \"recipeId\": 47,\n        \"name\": \"Chicken Fried Rice\",\n        \"description\": \"Chicken fried rice with vegetables and soy sauce.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 2,\n        \"name\": \"Greek Salad\",\n        \"description\": \"Fresh Mediterranean salad with feta cheese and olives.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 11,\n        \"name\": \"Veggie Burger\",\n        \"description\": \"Delicious vegetarian patty served on a bun with fresh toppings.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 27,\n        \"name\": \"Beef Burger\",\n        \"description\": \"Juicy beef burger patty served on a soft bun with lettuce and sauce.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 1,\n        \"name\": \"Spaghetti Bolognese\",\n        \"description\": \"Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 20,\n        \"name\": \"Fish and Chips\",\n        \"description\": \"Classic British deep-fried battered fish served with thick-cut fried potatoes.\",\n        \"image\": null,\n        \"cookable\": false\n    },\n    {\n        \"recipeId\": 100,\n        \"name\": \"Greek Moussaka\",\n        \"description\": \"Traditional Greek casserole with layered eggplant, meat sauce, and bechamel.\",\n        \"image\": null,\n        \"cookable\": false\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "DeleteRecipeAsync",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/recipe/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"recipe",
+								"1"
+							]
+						},
+						"description": "Success -> Ok\n\nException -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "DeleteRecipeAsync",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:29:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "DeleteRecipeAsync (notfound)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"10000"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:29:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"The given key was not present in the dictionary.\",\n    \"status\": 400\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateRecipeAsync",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"TestRecipe\",\r\n    \"Description\": \"This is a recipe test\",\r\n    \"PrepareTime\": 45,\r\n    \"Instructions\": \"1. Prepare the test 2. Execute the test\",\r\n    \"Complexity\": 1,\r\n    \"ServingSize\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/recipe",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"recipe"
+							]
+						},
+						"description": "\\-> CreatedAtAction"
+					},
+					"response": [
+						{
+							"name": "500!! (only required props filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"TestRecipe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:36:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "System.InvalidOperationException: No route matches the supplied values.\r\n   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)\r\n\r\nHEADERS\r\n=======\r\nAccept: */*\r\nConnection: keep-alive\r\nHost: 127.0.0.1:5101\r\nUser-Agent: PostmanRuntime/7.51.0\r\nAccept-Encoding: gzip, deflate, br\r\nContent-Type: application/json\r\nContent-Length: 30\r\nPostman-Token: 45764fe1-1af9-41e5-be3c-020f9c37f075\r\n"
+						},
+						{
+							"name": "500!! (everything filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"TestRecipe\",\r\n    \"Description\": \"This is a recipe test\",\r\n    \"PrepareTime\": 45,\r\n    \"Instructions\": \"1. Prepare the test 2. Execute the test\",\r\n    \"Complexity\": 1,\r\n    \"ServingSize\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:41:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "System.InvalidOperationException: No route matches the supplied values.\r\n   at Microsoft.AspNetCore.Mvc.CreatedAtActionResult.OnFormatting(ActionContext context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsyncCore(ActionContext context, ObjectResult result, Type objectType, Object value)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ObjectResultExecutor.ExecuteAsync(ActionContext context, ObjectResult result)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeNextResultFilterAsync[TFilter,TFilterAsync]()\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResultExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.ResultNext[TFilter,TFilterAsync](State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.InvokeResultFilters()\r\n--- End of stack trace from previous location ---\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)\r\n\r\nHEADERS\r\n=======\r\nAccept: */*\r\nConnection: keep-alive\r\nHost: 127.0.0.1:5101\r\nUser-Agent: PostmanRuntime/7.51.0\r\nAccept-Encoding: gzip, deflate, br\r\nContent-Type: application/json\r\nContent-Length: 208\r\nPostman-Token: 78038ccb-0e64-47f2-b26b-d06e33563327\r\n"
+						}
+					]
+				},
+				{
+					"name": "UpdateRecipeAsync",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"TestRecipe\",\r\n    \"Description\": \"This is a recipe test\",\r\n    \"PrepareTime\": 45,\r\n    \"Instructions\": \"1. Prepare the test 2. Execute the test\",\r\n    \"Complexity\": 1,\r\n    \"ServingSize\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/recipe/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"recipe",
+								"1"
+							]
+						},
+						"description": "Success -> Ok  \nNull -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "UpdateRecipeAsync (only required props filled in)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"TestRecipe\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:47:28 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"recipeId\": 1,\n    \"name\": \"TestRecipe\",\n    \"description\": \"Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.\",\n    \"image\": null,\n    \"cookable\": null\n}"
+						},
+						{
+							"name": "UpdateRecipeAsync (everything filled in)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"TestRecipe\",\r\n    \"Description\": \"This is a recipe test\",\r\n    \"PrepareTime\": 45,\r\n    \"Instructions\": \"1. Prepare the test 2. Execute the test\",\r\n    \"Complexity\": 1,\r\n    \"ServingSize\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:47:55 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"recipeId\": 1,\n    \"name\": \"TestRecipe\",\n    \"description\": \"This is a recipe test\",\n    \"image\": null,\n    \"cookable\": null\n}"
+						},
+						{
+							"name": "UpdateRecipeAsync (notfound)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"TestRecipe\",\r\n    \"Description\": \"This is a recipe test\",\r\n    \"PrepareTime\": 45,\r\n    \"Instructions\": \"1. Prepare the test 2. Execute the test\",\r\n    \"Complexity\": 1,\r\n    \"ServingSize\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/recipe/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"recipe",
+										"10000"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:48:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"detail\": \"Recipe not found.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "TODO  \n\\- CreateRecipeAsync  \n(- UpdateRecipeAsync?)"
+		},
+		{
+			"name": "Shoppinglist",
+			"item": [
+				{
+					"name": "GetAllShoppingListItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/shoppinglist",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"shoppinglist"
+							]
+						},
+						"description": "\\-> Ok"
+					},
+					"response": [
+						{
+							"name": "GetAllShoppingListItems",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:22:40 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"shoppingListItems\": [\n        {\n            \"id\": 1,\n            \"product\": {\n                \"productId\": 6,\n                \"productName\": \"Tomatoes\",\n                \"uomName\": \"Pieces\"\n            },\n            \"amount\": 2\n        },\n        {\n            \"id\": 2,\n            \"product\": {\n                \"productId\": 5,\n                \"productName\": \"Carrots\",\n                \"uomName\": \"Pieces\"\n            },\n            \"amount\": 1\n        },\n        {\n            \"id\": 3,\n            \"product\": {\n                \"productId\": 3,\n                \"productName\": \"Milk\",\n                \"uomName\": \"L\"\n            },\n            \"amount\": 2\n        },\n        {\n            \"id\": 4,\n            \"product\": {\n                \"productId\": 16,\n                \"productName\": \"Bread\",\n                \"uomName\": \"Pieces\"\n            },\n            \"amount\": 1\n        },\n        {\n            \"id\": 5,\n            \"product\": {\n                \"productId\": 2,\n                \"productName\": \"Eggs\",\n                \"uomName\": \"Pieces\"\n            },\n            \"amount\": 1\n        },\n        {\n            \"id\": 6,\n            \"product\": {\n                \"productId\": 9,\n                \"productName\": \"Cheese\",\n                \"uomName\": \"g\"\n            },\n            \"amount\": 0.5\n        },\n        {\n            \"id\": 7,\n            \"product\": {\n                \"productId\": 11,\n                \"productName\": \"Apples\",\n                \"uomName\": \"Pieces\"\n            },\n            \"amount\": 6\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetShoppingListItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/shoppinglist/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"shoppinglist",
+								"1"
+							]
+						},
+						"description": "Success -> Ok  \nNull -> NotFound"
+					},
+					"response": [
+						{
+							"name": "GetShoppingListItem",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:23:20 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"product\": {\n        \"productId\": 6,\n        \"productName\": \"Tomatoes\",\n        \"uomName\": \"Pieces\"\n    },\n    \"amount\": 2\n}"
+						},
+						{
+							"name": "GetShoppingListItem (notfound)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist",
+										"10000"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:23:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-28fb10ff31eb3cfae864298f53643778-c79aef8fa0e3d7c9-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteShoppingListItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/shoppinglist/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"shoppinglist",
+								"1"
+							]
+						},
+						"description": "Success -> NoContent  \nException -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "DeleteShoppingListItem",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:30:49 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "DeleteShoppingListItem (notfoud)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist",
+										"10000"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:31:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"title\": \"Shoppinglist item not found\",\n    \"status\": 400\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateShoppingListItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\": 1,\r\n    \"Amount\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/shoppinglist",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"shoppinglist"
+							]
+						},
+						"description": "\\-> CreatedAtAction"
+					},
+					"response": [
+						{
+							"name": "500!! (only required props filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProductId\": 1\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:45:15 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.\r\n ---> System.NullReferenceException: Object reference not set to an instance of an object.\r\n   at System.Linq.Expressions.Interpreter.Instruction.NullCheck(Object o)\r\n   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)\r\n   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)\r\n   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.<Evaluate>g__EvaluateCore|70_0(Expression expression, String& parameterName, Boolean& isContextAccessor)\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.<Evaluate>g__EvaluateCore|70_0(Expression expression, String& parameterName, Boolean& isContextAccessor)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.Evaluate(Expression expression, String& parameterName, Boolean& isContextAccessor)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.ProcessEvaluatableRoot(Expression evaluatableRoot, State& state, Boolean forceEvaluation)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitBinary(BinaryExpression binary)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitLambda[T](Expression`1 lambda)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitUnary(UnaryExpression unary)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.Visit[T](ReadOnlyCollection`1 expressions, Func`2 elementVisitor, StateType& aggregateStateType, State[]& expressionStates, Boolean poolExpressionStates)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitMethodCall(MethodCallExpression methodCall)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.Visit(Expression expression, State& state)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.ExtractParameters(Expression expression, IParameterValues parameterValues, Boolean parameterize, Boolean clearParameterizedValues, Boolean precompiledQuery, IReadOnlySet`1& nonNullableReferenceTypeParameters)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.ExtractParameters(Expression expression, IParameterValues parameterValues, Boolean parameterize, Boolean clearParameterizedValues)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean compiledQuery, Boolean generateContextAccessors)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)\r\n   at Nimble_It.Persistence.ShoppingListRepository.CreateShoppingListItem(ShoppingList shoppingListItemEntity) in C:\\Users\\Luna\\Documents\\Luna\\School\\3_projectwerk\\projectwerk2\\Projectwerk2\\Projectwerk2\\Nimble-It.Backend\\Nimble-It.persistence\\ShoppingListRepository.cs:line 32\r\n   at Nimble_It.Domain.Services.ShoppingListService.CreateShoppingListItem(ShoppingListItemRequestContract shoppingListItemRequestContract) in C:\\Users\\Luna\\Documents\\Luna\\School\\3_projectwerk\\projectwerk2\\Projectwerk2\\Projectwerk2\\Nimble-It.Backend\\Nimble-It.Domain.Services\\ShoppingListService.cs:line 41\r\n   at Nimble_It.Controllers.ShoppinglistController.CreateShoppingListItem(ShoppingListItemRequestContract shoppingListItemRequestContract) in C:\\Users\\Luna\\Documents\\Luna\\School\\3_projectwerk\\projectwerk2\\Projectwerk2\\Projectwerk2\\Nimble-It.Backend\\Nimble-It.Api\\Controllers\\ShoppinglistController.cs:line 40\r\n   at lambda_method939(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)\r\n\r\nHEADERS\r\n=======\r\nAccept: */*\r\nConnection: keep-alive\r\nHost: 127.0.0.1:5101\r\nUser-Agent: PostmanRuntime/7.51.0\r\nAccept-Encoding: gzip, deflate, br\r\nContent-Type: application/json\r\nContent-Length: 24\r\nPostman-Token: c03991be-01c8-4d74-b275-87565fee1ff6\r\n"
+						},
+						{
+							"name": "500!! (everything filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProductId\": 1,\r\n    \"Amount\": 2\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:47:54 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "System.InvalidOperationException: An exception was thrown while attempting to evaluate a LINQ query parameter expression. See the inner exception for more information. To show additional information call 'DbContextOptionsBuilder.EnableSensitiveDataLogging'.\r\n ---> System.NullReferenceException: Object reference not set to an instance of an object.\r\n   at System.Linq.Expressions.Interpreter.Instruction.NullCheck(Object o)\r\n   at System.Linq.Expressions.Interpreter.FuncCallInstruction`2.Run(InterpretedFrame frame)\r\n   at System.Linq.Expressions.Interpreter.Interpreter.Run(InterpretedFrame frame)\r\n   at System.Linq.Expressions.Interpreter.LightLambda.Run(Object[] arguments)\r\n   at System.Dynamic.Utils.DelegateHelpers.FuncThunk[TReturn](Func`2 handler)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.<Evaluate>g__EvaluateCore|70_0(Expression expression, String& parameterName, Boolean& isContextAccessor)\r\n   --- End of inner exception stack trace ---\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.<Evaluate>g__EvaluateCore|70_0(Expression expression, String& parameterName, Boolean& isContextAccessor)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.Evaluate(Expression expression, String& parameterName, Boolean& isContextAccessor)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.ProcessEvaluatableRoot(Expression evaluatableRoot, State& state, Boolean forceEvaluation)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitBinary(BinaryExpression binary)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitLambda[T](Expression`1 lambda)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitUnary(UnaryExpression unary)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.Visit[T](ReadOnlyCollection`1 expressions, Func`2 elementVisitor, StateType& aggregateStateType, State[]& expressionStates, Boolean poolExpressionStates)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.VisitMethodCall(MethodCallExpression methodCall)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.Visit(Expression expression, State& state)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.ExtractParameters(Expression expression, IParameterValues parameterValues, Boolean parameterize, Boolean clearParameterizedValues, Boolean precompiledQuery, IReadOnlySet`1& nonNullableReferenceTypeParameters)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.ExpressionTreeFuncletizer.ExtractParameters(Expression expression, IParameterValues parameterValues, Boolean parameterize, Boolean clearParameterizedValues)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExtractParameters(Expression query, IParameterValues parameterValues, IDiagnosticsLogger`1 logger, Boolean compiledQuery, Boolean generateContextAccessors)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteCore[TResult](Expression query, Boolean async, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.QueryCompiler.ExecuteAsync[TResult](Expression query, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.EntityQueryProvider.ExecuteAsync[TResult](Expression expression, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)\r\n   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)\r\n   at Nimble_It.Persistence.ShoppingListRepository.CreateShoppingListItem(ShoppingList shoppingListItemEntity) in C:\\Users\\Luna\\Documents\\Luna\\School\\3_projectwerk\\projectwerk2\\Projectwerk2\\Projectwerk2\\Nimble-It.Backend\\Nimble-It.persistence\\ShoppingListRepository.cs:line 32\r\n   at Nimble_It.Domain.Services.ShoppingListService.CreateShoppingListItem(ShoppingListItemRequestContract shoppingListItemRequestContract) in C:\\Users\\Luna\\Documents\\Luna\\School\\3_projectwerk\\projectwerk2\\Projectwerk2\\Projectwerk2\\Nimble-It.Backend\\Nimble-It.Domain.Services\\ShoppingListService.cs:line 41\r\n   at Nimble_It.Controllers.ShoppinglistController.CreateShoppingListItem(ShoppingListItemRequestContract shoppingListItemRequestContract) in C:\\Users\\Luna\\Documents\\Luna\\School\\3_projectwerk\\projectwerk2\\Projectwerk2\\Projectwerk2\\Nimble-It.Backend\\Nimble-It.Api\\Controllers\\ShoppinglistController.cs:line 40\r\n   at lambda_method939(Closure, Object)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)\r\n   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)\r\n   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)\r\n\r\nHEADERS\r\n=======\r\nAccept: */*\r\nConnection: keep-alive\r\nHost: 127.0.0.1:5101\r\nUser-Agent: PostmanRuntime/7.51.0\r\nAccept-Encoding: gzip, deflate, br\r\nContent-Type: application/json\r\nContent-Length: 42\r\nPostman-Token: ed3c5f9f-a09c-45fd-9faa-355840622ebc\r\n"
+						}
+					]
+				},
+				{
+					"name": "UpdateShoppingListItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\": 6,\r\n    \"Amount\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/shoppinglist/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"shoppinglist",
+								"1"
+							]
+						},
+						"description": "Success -> Ok  \nNull -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "UpdateShoppingListItem",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProductId\": 6,\r\n    \"Amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:42:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"product\": {\n        \"productId\": 6,\n        \"productName\": \"Tomatoes\",\n        \"uomName\": \"Pieces\"\n    },\n    \"amount\": 4\n}"
+						},
+						{
+							"name": "UpdateShoppingListItem (notfound)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProductId\": 6,\r\n    \"Amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist",
+										"10000"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:42:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"detail\": \"Shopping list item not found.\"\n}"
+						},
+						{
+							"name": "!! UpdateShoppingListItem (onduidelijke foutmelding over productId missing/onjuist)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Amount\": 4\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/shoppinglist/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"shoppinglist",
+										"1"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:42:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"detail\": \"Shopping list item not found.\"\n}"
+						}
+					]
+				}
+			],
+			"description": "TODO  \n\\- CreateShoppingListItem  \n\\- ev UpdateShoppingListItem bij refactor"
+		},
+		{
+			"name": "Inventory",
+			"item": [
+				{
+					"name": "GetAllInventoryItems",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/inventory",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"inventory"
+							]
+						},
+						"description": "\\-> Ok"
+					},
+					"response": [
+						{
+							"name": "GetAllInventoryItems",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:25:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categories\": [\n        {\n            \"categoryId\": 6,\n            \"categoryName\": \"Beverages\",\n            \"notificationTime\": 10,\n            \"products\": [\n                {\n                    \"productId\": 18,\n                    \"productName\": \"Coffee\",\n                    \"uomName\": \"g\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 22,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 250,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2027-03-15\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 17,\n                    \"productName\": \"Orange Juice\",\n                    \"uomName\": \"L\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 21,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2026-01-03\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 19,\n                    \"productName\": \"Tea\",\n                    \"uomName\": \"g\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 6,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 300,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2026-12-31\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"categoryId\": 3,\n            \"categoryName\": \"Dairy\",\n            \"notificationTime\": 3,\n            \"products\": [\n                {\n                    \"productId\": 28,\n                    \"productName\": \"Butter\",\n                    \"uomName\": \"g\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 29,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 50,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-26\",\n                            \"expiryDate\": \"2026-03-01\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 9,\n                    \"productName\": \"Cheese\",\n                    \"uomName\": \"g\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 15,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 100,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2026-02-15\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 2,\n                    \"productName\": \"Eggs\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 2,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 12,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2026-01-03\",\n                            \"imageUrl\": null\n                        },\n                        {\n                            \"inventoryId\": 10,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 6,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2026-02-01\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 3,\n                    \"productName\": \"Milk\",\n                    \"uomName\": \"L\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 11,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 1,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2025-12-28\",\n                            \"imageUrl\": null\n                        },\n                        {\n                            \"inventoryId\": 23,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-26\",\n                            \"expiryDate\": \"2026-03-01\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 10,\n                    \"productName\": \"Yogurt\",\n                    \"uomName\": \"ml\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 4,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 1000,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2026-01-05\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"categoryId\": 4,\n            \"categoryName\": \"Fruit\",\n            \"notificationTime\": 4,\n            \"products\": [\n                {\n                    \"productId\": 11,\n                    \"productName\": \"Apples\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 26,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 4,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-26\",\n                            \"expiryDate\": \"2026-01-01\",\n                            \"imageUrl\": null\n                        },\n                        {\n                            \"inventoryId\": 16,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 6,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2026-01-08\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 12,\n                    \"productName\": \"Bananas\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 17,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 5,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2025-12-30\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 13,\n                    \"productName\": \"Oranges\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 18,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 10,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2026-01-10\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"categoryId\": 5,\n            \"categoryName\": \"Grains\",\n            \"notificationTime\": 7,\n            \"products\": [\n                {\n                    \"productId\": 16,\n                    \"productName\": \"Bread\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 20,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2025-12-29\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 15,\n                    \"productName\": \"Pasta\",\n                    \"uomName\": \"kg\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 19,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 0.1,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2027-06-30\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 14,\n                    \"productName\": \"Rice\",\n                    \"uomName\": \"kg\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 5,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 0.5,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2027-12-31\",\n                            \"imageUrl\": null\n                        },\n                        {\n                            \"inventoryId\": 27,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-26\",\n                            \"expiryDate\": \"2027-12-31\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"categoryId\": 2,\n            \"categoryName\": \"Meat\",\n            \"notificationTime\": 2,\n            \"products\": [\n                {\n                    \"productId\": 4,\n                    \"productName\": \"Carero\",\n                    \"uomName\": \"kg\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 12,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 0.5,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Freezer\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2028-06-23\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 7,\n                    \"productName\": \"Chicken Breast\",\n                    \"uomName\": \"kg\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 13,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 0.2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2025-12-27\",\n                            \"imageUrl\": null\n                        },\n                        {\n                            \"inventoryId\": 24,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Freezer\",\n                            \"purchaseDate\": \"2025-12-26\",\n                            \"expiryDate\": \"2026-02-05\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 8,\n                    \"productName\": \"Ground Beef\",\n                    \"uomName\": \"kg\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 14,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 0.7,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Freezer\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2026-01-20\",\n                            \"imageUrl\": null\n                        },\n                        {\n                            \"inventoryId\": 25,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 1.2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Freezer\",\n                            \"purchaseDate\": \"2025-12-26\",\n                            \"expiryDate\": \"2026-01-20\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"categoryId\": 10,\n            \"categoryName\": \"Spices\",\n            \"notificationTime\": 30,\n            \"products\": [\n                {\n                    \"productId\": 27,\n                    \"productName\": \"Cinnamon\",\n                    \"uomName\": \"g\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 28,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 25,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-26\",\n                            \"expiryDate\": \"2027-12-25\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                }\n            ]\n        },\n        {\n            \"categoryId\": 1,\n            \"categoryName\": \"Vegetables\",\n            \"notificationTime\": 5,\n            \"products\": [\n                {\n                    \"productId\": 33,\n                    \"productName\": \"Bell Pepper\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 8,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2026-01-05\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 5,\n                    \"productName\": \"Carrots\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 3,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 1,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2026-01-01\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 1,\n                    \"productName\": \"Paprika\",\n                    \"uomName\": \"Pieces\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 1,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 2,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2025-12-27\",\n                            \"imageUrl\": null\n                        },\n                        {\n                            \"inventoryId\": 9,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 5,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Cabinet\",\n                            \"purchaseDate\": \"2025-12-25\",\n                            \"expiryDate\": \"2026-01-04\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                },\n                {\n                    \"productId\": 25,\n                    \"productName\": \"Peas\",\n                    \"uomName\": \"g\",\n                    \"inventory\": [\n                        {\n                            \"inventoryId\": 7,\n                            \"productId\": 0,\n                            \"productName\": null,\n                            \"categoryName\": null,\n                            \"amount\": 200,\n                            \"unitOfMeasurement\": null,\n                            \"storageTypeName\": \"Fridge\",\n                            \"purchaseDate\": \"2025-12-22\",\n                            \"expiryDate\": \"2026-01-05\",\n                            \"imageUrl\": null\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "GetInventoryItem",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/inventory/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"inventory",
+								"1"
+							]
+						},
+						"description": "Success -> Ok\n\nNull -> NotFound"
+					},
+					"response": [
+						{
+							"name": "GetInventoryItem",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:25:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inventoryId\": 1,\n    \"productId\": 0,\n    \"productName\": null,\n    \"categoryName\": null,\n    \"amount\": 2,\n    \"unitOfMeasurement\": null,\n    \"storageTypeName\": \"Fridge\",\n    \"purchaseDate\": null,\n    \"expiryDate\": null,\n    \"imageUrl\": null\n}"
+						},
+						{
+							"name": "GetInventoryItem (notfound)",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"10000"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:25:56 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-845ee9fb72c50cc5aae7d9fb2be4e6c7-55c7af5eafd5a56a-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DeleteIventoryItem",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/inventory/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"inventory",
+								"1"
+							]
+						},
+						"description": "Deleted -> NoContent  \nNot deleted -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "DeleteIventoryItem",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:31:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "DeleteIventoryItem (notfound)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"10000"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:32:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"traceId\": \"00-33276a7c2ecc22e77c7b4c8ad1771517-939e7afa99f822da-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "AddInventoryItem",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"ProductId\": 1,\r\n    \"StorageTypeName\": \"Cabinet\",\r\n    \"Amount\": 3,\r\n    \"ExpiryDate\": \"2026-01-06\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/inventory",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"inventory"
+							]
+						},
+						"description": "Success -> CreatedAtAction  \nException -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "AddInventoryItem (everything filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProductId\": 1,\r\n    \"StorageTypeName\": \"Fridge\",\r\n    \"Amount\": 5,\r\n    \"ExpiryDate\": \"2026-05-10\",\r\n    \"PurchaseDate\": \"2026-01-02\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Jan 2026 19:40:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/inventory?id=30"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inventoryId\": 30,\n    \"productId\": 1,\n    \"productName\": \"Paprika\",\n    \"categoryName\": \"Vegetables\",\n    \"amount\": 5,\n    \"unitOfMeasurement\": \"Pieces\",\n    \"storageTypeName\": \"Fridge\",\n    \"purchaseDate\": \"2026-01-02\",\n    \"expiryDate\": \"2026-05-10\",\n    \"imageUrl\": null\n}"
+						},
+						{
+							"name": "AddInventoryItem (only required props filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ProductId\": 1,\r\n    \"StorageTypeName\": \"Cabinet\",\r\n    \"Amount\": 3,\r\n    \"ExpiryDate\": \"2026-01-06\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 13 Jan 2026 19:43:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/inventory?id=31"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inventoryId\": 31,\n    \"productId\": 1,\n    \"productName\": \"Paprika\",\n    \"categoryName\": \"Vegetables\",\n    \"amount\": 3,\n    \"unitOfMeasurement\": \"Pieces\",\n    \"storageTypeName\": \"Cabinet\",\n    \"purchaseDate\": null,\n    \"expiryDate\": \"2026-01-06\",\n    \"imageUrl\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateQuantityInventoryItem",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "150",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/inventory/22/amount",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"inventory",
+								"22",
+								"amount"
+							]
+						},
+						"description": "Success (partly used) -> Ok  \nSuccess (fully used) -> NoContent  \nException -> Conflict\n\n- Update Coffee (id = 22, amount = 250)"
+					},
+					"response": [
+						{
+							"name": "UpdateQuantityInventoryItem (> CurrentAmount)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "300",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/22/amount",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"22",
+										"amount"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:22:25 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 409,\n    \"detail\": \"Not enough of this product available to use.\"\n}"
+						},
+						{
+							"name": "UpdateQuantityInventoryItem (partly)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "150",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/22/amount",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"22",
+										"amount"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:19:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inventoryId\": 22,\n    \"productId\": 0,\n    \"productName\": null,\n    \"categoryName\": null,\n    \"amount\": 100,\n    \"unitOfMeasurement\": null,\n    \"storageTypeName\": \"Cabinet\",\n    \"purchaseDate\": null,\n    \"expiryDate\": null,\n    \"imageUrl\": null\n}"
+						},
+						{
+							"name": "UpdateQuantityInventoryItem (fully)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "100",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/22/amount",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"22",
+										"amount"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:20:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "UpdateQuantityInventoryItem (notfound)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "150",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/22/amount",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"22",
+										"amount"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:21:22 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-c92af906c893aba1c289e535ada4d957-bc9ad7f9dd90deca-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UpdateStorageTypeInventory",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"StorageTypeName\": \"Freezer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/inventory/22/storage-type",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"inventory",
+								"22",
+								"storage-type"
+							]
+						},
+						"description": "Success -> Ok\n\nNull -> NotFound"
+					},
+					"response": [
+						{
+							"name": "UpdateStorageTypeInventory",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"StorageTypeName\": \"Fridge\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/22/storage-type",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"22",
+										"storage-type"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:25:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"inventoryId\": 22,\n    \"productId\": 0,\n    \"productName\": null,\n    \"categoryName\": null,\n    \"amount\": 250,\n    \"unitOfMeasurement\": null,\n    \"storageTypeName\": \"Fridge\",\n    \"purchaseDate\": null,\n    \"expiryDate\": null,\n    \"imageUrl\": null\n}"
+						},
+						{
+							"name": "UpdateStorageTypeInventory (notfound)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"StorageTypeName\": \"Freezer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/10000/storage-type",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"10000",
+										"storage-type"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:26:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-2486dbef4f8a487df75d3d69e4f38c98-cd0c416a4aa21c2d-00\"\n}"
+						},
+						{
+							"name": "UpdateStorageTypeInventory (name =)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"StorageTypeName\": \"Cabinet\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/22/storage-type",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"22",
+										"storage-type"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 11:10:38 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Storage type can not be the same as before"
+						},
+						{
+							"name": "UpdateStorageTypeInventory (storage type not found)",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"StorageTypeName\": \"  \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/inventory/22/storage-type",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"inventory",
+										"22",
+										"storage-type"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 04 Jan 2026 11:11:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.5\",\n    \"title\": \"Not Found\",\n    \"status\": 404,\n    \"traceId\": \"00-ba3177a246f5a879264de68d019dec60-43671a84861fdbc3-00\"\n}"
+						}
+					]
+				}
+			],
+			"description": "TODO  \n\\- AddInventoryItem  \n\\- UpdateStorageTypeInventory (check naam + id)"
+		},
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "GetProducts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/product",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"product"
+							]
+						},
+						"description": "\\-> Ok"
+					},
+					"response": [
+						{
+							"name": "GetProducts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:27:10 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"productId\": 1,\n        \"productName\": \"Paprika\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 2,\n        \"productName\": \"Eggs\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 3,\n        \"productName\": \"Milk\",\n        \"uomName\": \"L\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 4,\n        \"productName\": \"Carero\",\n        \"uomName\": \"kg\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 5,\n        \"productName\": \"Carrots\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 6,\n        \"productName\": \"Tomatoes\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 7,\n        \"productName\": \"Chicken Breast\",\n        \"uomName\": \"kg\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 8,\n        \"productName\": \"Ground Beef\",\n        \"uomName\": \"kg\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 9,\n        \"productName\": \"Cheese\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 10,\n        \"productName\": \"Yogurt\",\n        \"uomName\": \"ml\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 11,\n        \"productName\": \"Apples\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 12,\n        \"productName\": \"Bananas\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 13,\n        \"productName\": \"Oranges\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 14,\n        \"productName\": \"Rice\",\n        \"uomName\": \"kg\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 15,\n        \"productName\": \"Pasta\",\n        \"uomName\": \"kg\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 16,\n        \"productName\": \"Bread\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 17,\n        \"productName\": \"Orange Juice\",\n        \"uomName\": \"L\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 18,\n        \"productName\": \"Coffee\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 19,\n        \"productName\": \"Tea\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 20,\n        \"productName\": \"Tomato Sauce\",\n        \"uomName\": \"ml\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 21,\n        \"productName\": \"Onion\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 22,\n        \"productName\": \"Garlic\",\n        \"uomName\": \"Cloves\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 23,\n        \"productName\": \"Salt\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 24,\n        \"productName\": \"Soy Sauce\",\n        \"uomName\": \"ml\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 25,\n        \"productName\": \"Peas\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 26,\n        \"productName\": \"Sugar\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 27,\n        \"productName\": \"Cinnamon\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 28,\n        \"productName\": \"Butter\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 29,\n        \"productName\": \"Berries\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 30,\n        \"productName\": \"Cream\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 31,\n        \"productName\": \"Tofu\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 32,\n        \"productName\": \"Mushrooms\",\n        \"uomName\": \"g\",\n        \"imageUrl\": null\n    },\n    {\n        \"productId\": 33,\n        \"productName\": \"Bell Pepper\",\n        \"uomName\": \"Pieces\",\n        \"imageUrl\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "DeleteProduct",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/product/1",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"product",
+								"1"
+							]
+						},
+						"description": "Deleted -> NoContent  \nNot deleted -> BadRequest"
+					},
+					"response": [
+						{
+							"name": "DeleteProduct",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product/1",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product",
+										"1"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:32:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								}
+							],
+							"cookie": [],
+							"body": ""
+						},
+						{
+							"name": "DeleteProduct (notfound)",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product/10000",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product",
+										"10000"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:33:05 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"Bad Request\",\n    \"status\": 400,\n    \"traceId\": \"00-0550e43882a0f09a70638c67da42846c-d86a91d3e6f546b9-00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "CreateProduct",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ProductName",
+									"value": "TestProduct",
+									"type": "text"
+								},
+								{
+									"key": "CategoryId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "UomId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/product?requireImage=false",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"product"
+							],
+							"query": [
+								{
+									"key": "requireImage",
+									"value": "false"
+								}
+							]
+						},
+						"description": "Success -> CreatedAtAction  \nException -> BadRequest\n\n- product name empty\n    \n- categoryid of uomid <=0\n    \n- image null indien het wel gevraagd was (requireImage)\n    \n- image bestaat indien het niet gevraagd was (!requireImage)"
+					},
+					"response": [
+						{
+							"name": "CreateProduct (without image)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ProductName",
+											"value": "TestProduct",
+											"type": "text"
+										},
+										{
+											"key": "CategoryId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "UomId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product?requireImage=false",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "requireImage",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:57:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/product?id=34"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 34,\n    \"productName\": \"TestProduct\",\n    \"uomName\": \"kg\",\n    \"imageUrl\": null\n}"
+						},
+						{
+							"name": "CreateProduct (with image)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ProductName",
+											"value": "TestProduct",
+											"type": "text"
+										},
+										{
+											"key": "CategoryId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "UomId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "ImageFile",
+											"type": "file",
+											"src": "/C:/Users/Luna/Documents/Luna/School/3_eigenproject/restaurant_photos/Foubert1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product?requireImage=true",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "requireImage",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:59:19 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/product?id=35"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"productId\": 35,\n    \"productName\": \"TestProduct\",\n    \"uomName\": \"kg\",\n    \"imageUrl\": \"https://nimbleitblob.blob.core.windows.net/products/ef17250a-33f0-44cd-9a52-70d895a2c709.jpg\"\n}"
+						},
+						{
+							"name": "CreateProduct (!requireImage but provided)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ProductName",
+											"value": "TestProduct",
+											"type": "text"
+										},
+										{
+											"key": "CategoryId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "UomId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "ImageFile",
+											"type": "file",
+											"src": "/C:/Users/Luna/Documents/Luna/School/3_eigenproject/restaurant_photos/Poke1.jpg"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product?requireImage=false",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "requireImage",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:00:59 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Image should not be provided when requireImage is false"
+						},
+						{
+							"name": "CreateProduct (requireImage but not provided)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ProductName",
+											"value": "TestProduct",
+											"type": "text"
+										},
+										{
+											"key": "CategoryId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "UomId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product?requireImage=true",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "requireImage",
+											"value": "true"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:01:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Image is required when requireImage is true"
+						},
+						{
+							"name": "CreateProduct (empty productname)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ProductName",
+											"value": "  ",
+											"type": "text"
+										},
+										{
+											"key": "CategoryId",
+											"value": "1",
+											"type": "text"
+										},
+										{
+											"key": "UomId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product?requireImage=false",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "requireImage",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/problem+json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:02:03 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"type\": \"https://tools.ietf.org/html/rfc9110#section-15.5.1\",\n    \"title\": \"One or more validation errors occurred.\",\n    \"status\": 400,\n    \"errors\": {\n        \"ProductName\": [\n            \"The ProductName field is required.\"\n        ]\n    },\n    \"traceId\": \"00-32f99f4ade5ab3d5d5050c3e03ea0410-020a66a0c81f118b-00\"\n}"
+						},
+						{
+							"name": "CreateProduct (catId 0)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ProductName",
+											"value": "TestProduct",
+											"type": "text"
+										},
+										{
+											"key": "CategoryId",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "UomId",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product?requireImage=false",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "requireImage",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:03:53 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "CategoryId is required"
+						},
+						{
+							"name": "!! CatId and UomId 0",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "ProductName",
+											"value": "TestProduct",
+											"type": "text"
+										},
+										{
+											"key": "CategoryId",
+											"value": "0",
+											"type": "text"
+										},
+										{
+											"key": "UomId",
+											"value": "0",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/product?requireImage=false",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"product"
+									],
+									"query": [
+										{
+											"key": "requireImage",
+											"value": "false"
+										}
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:04:12 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "CategoryId is required"
+						}
+					]
+				}
+			],
+			"description": "TODO  \n\\- ev CreateProduct (duidelijkere foutmelding bij beide catid en uomid)"
+		},
+		{
+			"name": "Storagetypes",
+			"item": [
+				{
+					"name": "GetAllStorageTypes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/storagetypes",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"storagetypes"
+							]
+						},
+						"description": "\\-> Ok"
+					},
+					"response": [
+						{
+							"name": "GetAllStorageTypes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/storagetypes",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"storagetypes"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:27:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"storageTypeId\": 1,\n        \"storageTypeName\": \"Fridge\"\n    },\n    {\n        \"storageTypeId\": 2,\n        \"storageTypeName\": \"Freezer\"\n    },\n    {\n        \"storageTypeId\": 3,\n        \"storageTypeName\": \"Cabinet\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "CreateStorageType",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"StorageTypeName\": \"Table\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/storagetypes",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"storagetypes"
+							]
+						},
+						"description": "Success -> CreatedAtAction  \nException -> BadRequest\n\n- name empty or whitespaces"
+					},
+					"response": [
+						{
+							"name": "CreateStorageType",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"StorageTypeName\": \"Table\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/storagetypes",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"storagetypes"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:07:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/storagetypes?id=4"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"storageTypeId\": 4,\n    \"storageTypeName\": \"Table\"\n}"
+						},
+						{
+							"name": "CreateStorageType( empty name)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"StorageTypeName\": \"  \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/storagetypes",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"storagetypes"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:08:01 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Storage type name is required"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Categories",
+			"item": [
+				{
+					"name": "CreateCategory",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Name\": \"TestCategory\",\r\n    \"NotificationTime\": 5\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/categories",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"categories"
+							]
+						},
+						"description": "Success -> CreatedAtAction  \nException -> BadRequest\n\n- category name empty or whitespaces"
+					},
+					"response": [
+						{
+							"name": "CreateCategory (only required props filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"TestCategory\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/categories",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:11:39 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/categories?id=12"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 12,\n    \"name\": \"TestCategory\",\n    \"notificationTime\": null\n}"
+						},
+						{
+							"name": "CreateCategory (everything filled in)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"TestCategory\",\r\n    \"NotificationTime\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/categories",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:12:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/categories?id=13"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categoryId\": 13,\n    \"name\": \"TestCategory\",\n    \"notificationTime\": 5\n}"
+						},
+						{
+							"name": "CreateCategory (name missing)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Name\": \"  \",\r\n    \"NotificationTime\": 5\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/categories",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"categories"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:12:33 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Category name is required"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Unitsofmeasurements",
+			"item": [
+				{
+					"name": "CreateUnitOfMeasurement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"Unit\": \"kiloMetres\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{UrlNimbleIt}}/unitsofmeasurement",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"unitsofmeasurement"
+							]
+						},
+						"description": "Success -> CreatedAtAction  \nException -> BadRequest\n\n- uom name empty or whitespaces"
+					},
+					"response": [
+						{
+							"name": "CreateUnitOfMeasurement",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Unit\": \"kilometres\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/unitsofmeasurement",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"unitsofmeasurement"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:15:46 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Location",
+									"value": "http://127.0.0.1:5101/api/unitsofmeasurement?id=7"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 7,\n    \"unit\": \"kilometres\"\n}"
+						},
+						{
+							"name": "CreateUnitOfMeasurement (unit missing)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"Unit\": \"  \"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{UrlNimbleIt}}/unitsofmeasurement",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"unitsofmeasurement"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "text/plain; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 16:14:43 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "Unit name is required"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Tags",
+			"item": [
+				{
+					"name": "GetAllTags",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{UrlNimbleIt}}/tags",
+							"host": [
+								"{{UrlNimbleIt}}"
+							],
+							"path": [
+								"tags"
+							]
+						},
+						"description": "\\-> Ok"
+					},
+					"response": [
+						{
+							"name": "GetAllTags",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{UrlNimbleIt}}/tags",
+									"host": [
+										"{{UrlNimbleIt}}"
+									],
+									"path": [
+										"tags"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "Text",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 02 Jan 2026 15:28:08 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Kestrel"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"name\": \"Breakfast\"\n    },\n    {\n        \"id\": 2,\n        \"name\": \"Lunch\"\n    },\n    {\n        \"id\": 3,\n        \"name\": \"Dinner\"\n    },\n    {\n        \"id\": 4,\n        \"name\": \"Dessert\"\n    },\n    {\n        \"id\": 5,\n        \"name\": \"Easy\"\n    },\n    {\n        \"id\": 6,\n        \"name\": \"Medium\"\n    },\n    {\n        \"id\": 7,\n        \"name\": \"Hard\"\n    },\n    {\n        \"id\": 8,\n        \"name\": \"Quick\"\n    },\n    {\n        \"id\": 9,\n        \"name\": \"Long\"\n    },\n    {\n        \"id\": 10,\n        \"name\": \"Italian\"\n    },\n    {\n        \"id\": 11,\n        \"name\": \"Pasta\"\n    },\n    {\n        \"id\": 12,\n        \"name\": \"Asian\"\n    },\n    {\n        \"id\": 13,\n        \"name\": \"Greek\"\n    },\n    {\n        \"id\": 14,\n        \"name\": \"Salad\"\n    },\n    {\n        \"id\": 15,\n        \"name\": \"Healthy\"\n    },\n    {\n        \"id\": 16,\n        \"name\": \"Sweet\"\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}

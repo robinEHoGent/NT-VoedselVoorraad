@@ -1,0 +1,221 @@
+{
+  "recipes": [
+    {
+      "recipeId": 1,
+      "name": "Spaghetti Bolognese",
+      "description": "Classic Italian pasta dish with rich meat sauce. This traditional recipe has been passed down through generations, combining the perfect blend of ground beef, aromatic tomatoes, and carefully selected herbs. The sauce is slow-cooked to perfection, allowing all the flavors to meld together beautifully. Served over perfectly al dente pasta, this dish is comfort food at its finest and will transport you straight to the heart of Italy with every bite.",
+      "tags": [
+        { "tagId": 1, "name": "Italian" },
+        { "tagId": 2, "name": "Pasta" },
+        { "tagId": 3, "name": "Dinner" }
+      ],
+      "servingSize": 4,
+      "complexity": 2,
+      "prepareTime": 45,
+      "recipeParts": [
+        {
+          "recipePartId": 1,
+          "title": "Sauce",
+          "products": [
+            {
+              "productId": 8,
+              "name": "Ground Beef",
+              "amount": 0.5,
+              "unit": "Kg"
+            },
+            {
+              "productId": 6,
+              "name": "Tomatoes",
+              "amount": 5,
+              "unit": "Pieces"
+            },
+            { "productId": 1, "name": "Paprika", "amount": 2, "unit": "Pieces" }
+          ]
+        },
+        {
+          "recipePartId": 2,
+          "title": "Pasta",
+          "products": [
+            { "productId": 15, "name": "Pasta", "amount": 0.4, "unit": "Kg" }
+          ]
+        }
+      ],
+      "instructions": [
+        {
+          "step": "1",
+          "header": "Prepare sauce",
+          "text": "Brown the ground beef in a large pan over medium heat."
+        },
+        {
+          "step": "2",
+          "header": "Add vegetables",
+          "text": "Chop tomatoes and paprika, add to the beef and simmer for 20 minutes."
+        },
+        {
+          "step": "3",
+          "header": "Cook pasta",
+          "text": "Boil pasta according to package instructions, drain and serve with sauce."
+        }
+      ],
+      "createdOn": "2025-11-15T10:30:00Z",
+      "lastCooked": "2025-12-14T18:00:00Z",
+      "favorite": true
+    },
+    {
+      "recipeId": 2,
+      "name": "Chicken Stir Fry",
+      "description": "Quick and easy Asian-inspired chicken with vegetables",
+      "tags": [
+        { "tagId": 4, "name": "Asian" },
+        { "tagId": 5, "name": "Quick" },
+        { "tagId": 3, "name": "Dinner" }
+      ],
+      "servingSize": 2,
+      "complexity": 1,
+      "prepareTime": 25,
+      "recipeParts": [
+        {
+          "recipePartId": 3,
+          "title": "Main",
+          "products": [
+            {
+              "productId": 7,
+              "name": "Chicken Breast",
+              "amount": 0.4,
+              "unit": "Kg"
+            },
+            { "productId": 5, "name": "Carrots", "amount": 0.2, "unit": "Kg" },
+            {
+              "productId": 1,
+              "name": "Paprika",
+              "amount": 2,
+              "unit": "Pieces"
+            },
+            { "productId": 14, "name": "Rice", "amount": 0.2, "unit": "Kg" }
+          ]
+        }
+      ],
+      "instructions": [
+        {
+          "step": "1",
+          "header": "Prep ingredients",
+          "text": "Cut chicken into strips, slice vegetables thinly."
+        },
+        {
+          "step": "2",
+          "header": "Cook rice",
+          "text": "Cook rice according to package instructions."
+        },
+        {
+          "step": "3",
+          "header": "Stir fry",
+          "text": "Heat oil in wok, stir fry chicken until golden, add vegetables and cook for 5 minutes."
+        }
+      ],
+      "createdOn": "2025-10-20T14:00:00Z",
+      "favorite": false
+    },
+    {
+      "recipeId": 3,
+      "name": "Greek Salad",
+      "description": "Fresh Mediterranean salad with feta cheese",
+      "tags": [
+        { "tagId": 6, "name": "Greek" },
+        { "tagId": 7, "name": "Salad" },
+        { "tagId": 8, "name": "Healthy" },
+        { "tagId": 9, "name": "Lunch" }
+      ],
+      "servingSize": 4,
+      "complexity": 1,
+      "prepareTime": 15,
+      "recipeParts": [
+        {
+          "recipePartId": 4,
+          "title": "Salad",
+          "products": [
+            {
+              "productId": 6,
+              "name": "Tomatoes",
+              "amount": 4,
+              "unit": "Pieces"
+            },
+            {
+              "productId": 1,
+              "name": "Paprika",
+              "amount": 2,
+              "unit": "Pieces"
+            },
+            { "productId": 9, "name": "Cheese", "amount": 200, "unit": "g" }
+          ]
+        }
+      ],
+      "instructions": [
+        {
+          "step": "1",
+          "header": "Chop vegetables",
+          "text": "Cut tomatoes and paprika into chunks."
+        },
+        {
+          "step": "2",
+          "header": "Combine",
+          "text": "Mix vegetables in a bowl, add cubed feta cheese."
+        },
+        {
+          "step": "3",
+          "header": "Dress",
+          "text": "Drizzle with olive oil, lemon juice, and oregano."
+        }
+      ],
+      "createdOn": "2025-09-05T11:00:00Z",
+      "lastCooked": "2025-12-01T12:30:00Z",
+      "favorite": true
+    },
+    {
+      "recipeId": 4,
+      "name": "Banana Pancakes",
+      "description": "Fluffy breakfast pancakes with fresh bananas",
+      "tags": [
+        { "tagId": 10, "name": "Breakfast" },
+        { "tagId": 11, "name": "Sweet" }
+      ],
+      "servingSize": 2,
+      "complexity": 1,
+      "prepareTime": 20,
+      "recipeParts": [
+        {
+          "recipePartId": 5,
+          "title": "Batter",
+          "products": [
+            { "productId": 2, "name": "Eggs", "amount": 2, "unit": "Pieces" },
+            { "productId": 3, "name": "Milk", "amount": 0.2, "unit": "L" },
+            {
+              "productId": 12,
+              "name": "Bananas",
+              "amount": 2,
+              "unit": "Pieces"
+            }
+          ]
+        }
+      ],
+      "instructions": [
+        {
+          "step": "1",
+          "header": "Make batter",
+          "text": "Mix eggs, milk, and mashed banana together."
+        },
+        {
+          "step": "2",
+          "header": "Cook",
+          "text": "Pour batter onto hot pan and cook until golden on both sides."
+        },
+        {
+          "step": "3",
+          "header": "Serve",
+          "text": "Stack pancakes and top with syrup or fruit."
+        }
+      ],
+      "createdOn": "2025-11-01T08:00:00Z",
+      "favorite": false
+    }
+  ]
+}

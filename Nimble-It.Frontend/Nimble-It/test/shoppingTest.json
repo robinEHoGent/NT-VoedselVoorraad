@@ -1,0 +1,54 @@
+{
+  "shoppingListItems": [
+    {
+      "ItemId": 1,
+      "shoppingItem": {
+        "productId": 101,
+        "productName": "Milk",
+        "uomName": "L"
+      },
+      "amount": 2,
+      "checked": true
+    },
+    {
+      "ItemId": 2,
+      "shoppingItem": {
+        "productId": 102,
+        "productName": "Bread",
+        "uomName": "pcs"
+      },
+      "amount": 1,
+      "checked": false
+    },
+    {
+      "ItemId": 3,
+      "shoppingItem": {
+        "productId": 103,
+        "productName": "Eggs",
+        "uomName": "dozen"
+      },
+      "amount": 1,
+      "checked": true
+    },
+    {
+      "ItemId": 4,
+      "shoppingItem": {
+        "productId": 104,
+        "productName": "Cheese",
+        "uomName": "kg"
+      },
+      "amount": 0.5,
+      "checked": false
+    },
+    {
+      "ItemId": 5,
+      "shoppingItem": {
+        "productId": 105,
+        "productName": "Butter",
+        "uomName": "g"
+      },
+      "amount": 250,
+      "checked": true
+    }
+  ]
+}
