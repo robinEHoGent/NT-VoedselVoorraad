@@ -109,7 +109,7 @@ function HomePage() {
       {isLoading ? (
         <Loading />
       ) : (
-        <HomeSection title={"cookable"} recipes={cookable} />
+        <HomeSection title={"Cookable"} recipes={cookable} />
       )}
 
       {/* Background Blob  */}
@@ -118,12 +118,12 @@ function HomePage() {
       {isLoading ? (
         <Loading />
       ) : (
-        <HomeSection title={"not cookable"} recipes={notCookable} />
+        <HomeSection title={"Not cookable"} recipes={notCookable} />
       )}
       {isLoading ? (
         <Loading />
       ) : (
-        <HomeSection title={"favorite"} recipes={favorite} />
+        <HomeSection title={"Favorite"} recipes={favorite} />
       )}
       {isLoading ? (
         <Loading />
