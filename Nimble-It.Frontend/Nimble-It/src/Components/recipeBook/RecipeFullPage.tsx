@@ -199,11 +199,11 @@ function RecipeFullPage() {
         </div>
 
         {/* image */}
-        <div className="bg-bg flex aspect-square w-3/5 self-center rounded-full md:w-2/5 lg:w-1/5">
+                <div className="bg-bg flex aspect-square w-3/5 self-center rounded-full overflow-hidden md:w-2/5 lg:w-1/5">
           <img
-            src={viteLogo}
+                    src={recipe.image || viteLogo}
             alt={recipe.name}
-            className="h-full w-full object-cover select-none"
+                    className="h-full w-full object-cover select-none rounded-full"
             draggable="false"
           />
         </div>
@@ -298,7 +298,7 @@ function RecipeFullPage() {
                     </h3>
                     <h3>{product.productName}</h3>
                     <img
-                      src={viteLogo}
+                                          src={product.imageUrl || viteLogo}
                       alt={product.productName}
                       className="h-10 w-10 object-contain select-none"
                       draggable="false"

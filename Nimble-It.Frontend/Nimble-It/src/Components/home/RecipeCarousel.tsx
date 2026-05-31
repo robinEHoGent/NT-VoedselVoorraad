@@ -27,16 +27,17 @@ const RecipeCarousel: React.FC<RecipeCarouselProps> = ({ title, recipes }) => {
               id={recipe.recipeId}
               title={recipe.name}
               description={recipe.description}
-              cookable={
-                title === "cookable"
-                  ? true
-                  : title === "not cookable"
-                    ? false
-                    : recipe.cookable
-              }
-            />
-          </div>
-        ))}
+                      imageUrl={recipe.image}
+                      cookable={
+                        title === "cookable"
+                          ? true
+                          : title === "not cookable"
+                            ? false
+                            : recipe.cookable
+                      }
+                    />
+                  </div>
+                ))}
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import { GetAllProducts } from "../Api/apiCallsProducts";
 import Loading from "../UI/Loading";
+import viteLogo from "/vite.svg";
 import { useNavigate } from "react-router-dom";
 import { useState, useRef } from "react";
 import SearchButton from "../Components/buttons/SearchButton";
@@ -84,10 +85,18 @@ function ManageProductPage() {
             key={product.productId}
             className="product-card group border-primary bg-bg hover:border-tertiary flex items-center justify-between rounded-2xl border-2 px-4 py-2 transition-all duration-300 hover:scale-[1.02] hover:shadow-lg"
           >
-            <div className="w-1/2">
-              <h2> {product.productName}</h2>{" "}
-              <h4 className="text-customGrayMedium">{product.uomName}</h4>
-            </div>
+            <div className="w-1/2 flex items-center gap-3">
+                          {product.imageUrl ? (
+                            <img src={product.imageUrl} alt={product.productName} className="h-12 w-12 object-contain rounded-md" />
+                          ) : (
+                            <img src={viteLogo} alt={product.productName} className="h-12 w-12 object-contain rounded-md" />
+                          )}
+
+                          <div>
+                            <h2> {product.productName}</h2>{" "}
+                            <h4 className="text-customGrayMedium">{product.uomName}</h4>
+                          </div>
+                        </div>
             <div className="flex gap-2">
               <svg
                 viewBox="0 0 14 14"
