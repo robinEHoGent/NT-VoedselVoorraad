@@ -30,6 +30,7 @@ function RecipeSection({
               id={recipe.recipeId}
               title={recipe.name}
               description={recipe.description}
+              imageUrl={recipe.image}
               cookable={
                 title === "cookable"
                   ? true
