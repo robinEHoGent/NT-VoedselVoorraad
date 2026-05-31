@@ -19,7 +19,6 @@ services:
       - MYSQL_CONNECTION_STRING=${MYSQL_CONNECTION}
       - AZURITE_BLOB_CONNECTIONSTRING=DefaultEndpointsProtocol=http;AccountName=devstoreaccount1;AccountKey=Eby8vdM02xNOcqFlqUwJPLlmEtlCDXJ1OUzFT50uSRZ6IFsuFq2UVErCz4I6tq/K1SZFPTOtr/KBHBeksoGMGw==;BlobEndpoint=http://blob:10000/devstoreaccount1;
  
-      - MYSQL_CONNECTION=Server=127.0.0.1;Port=3306;Database=nimbleit_db;User=root;Password=root;
       - ADMIN_JWT_SECRET=${ADMIN_JWT_SECRET}
       
       # Logging
@@ -29,11 +28,11 @@ services:
       - TRACE_SQL_WITH_DATA=${TRACE_SQL_WITH_DATA:-false}
       
       # CORS
-      - Cors__AllowedOrigins=http://localhost:${EXTERNAL_FRONTEND_PORT}
+      - Cors__AllowedOrigins=http://localhost:${EXTERNAL_FRONTEND_PORT},http://localhost:${EXTERNAL_BACKEND_PORT},http://localhost:8887,http://localhost:5188,http://localhost:18887
       - Cors__AllowedMethods=GET,POST,PUT,DELETE,PATCH,OPTIONS
       
     ports:
-      - "${EXTERNAL_BACKEND_PORT:-5187}:${INTERNAL_BACKEND_PORT:-8080}"
+      - "${EXTERNAL_BACKEND_PORT:-5188}:${INTERNAL_BACKEND_PORT:-8080}"
     
   frontend:
     build: 
