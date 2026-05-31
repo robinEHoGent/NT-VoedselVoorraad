@@ -5,10 +5,14 @@ using Nimble_It.Domain.Services.mappers;
 using Nimble_It.Persistence;
 using Nimble_It.Persistence.Entities;
 using Nimble_It.Persistence.interfaces;
+using Azure.Storage.Blobs;
+using Azure.Storage.Blobs.Models;
+using System.IO;
+using System;
 
 namespace Nimble_It.Domain.Services
 {
-    public class RecipeService(IRecipeRepository recipeRepository) : IRecipeService
+    public class RecipeService(IRecipeRepository recipeRepository, BlobContainerClient containerClient) : IRecipeService
     {
         public async Task<List<RecipeResponseContract?>> GetAllRecipes(
             int page,
@@ -128,6 +132,17 @@ namespace Nimble_It.Domain.Services
 
             try
             {
+                // If an image file is provided, upload it to blob storage and store the URL on the model
+                if (recipeRequestContract.Image != null && recipeRequestContract.Image.Length > 0)
+                {
+                    var file = recipeRequestContract.Image;
+                    var fileName = $"{Guid.NewGuid()}{Path.GetExtension(file.FileName)}";
+                    var blobClient = containerClient.GetBlobClient(fileName);
+                    using var stream = file.OpenReadStream();
+                    await blobClient.UploadAsync(stream, new BlobHttpHeaders { ContentType = file.ContentType });
+                    recipeModel.Image = blobClient.Uri.ToString();
+                }
+
                 var recipeEntity = recipeModel.ToEntity();
 
                 // Update the basic recipe properties

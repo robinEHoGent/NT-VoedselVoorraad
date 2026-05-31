@@ -190,6 +190,7 @@ namespace Nimble_It.Domain.Services.mappers
                 ServingSize = model.ServingSize,
                 CreatedOn = DateTime.UtcNow,
                 Favorite = false,
+                ImageUrl = model.Image,
             };
         }
     }
