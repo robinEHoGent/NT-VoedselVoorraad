@@ -24,20 +24,21 @@ const RecipeCarousel: React.FC<RecipeCarouselProps> = ({ title, recipes }) => {
         {recipes.map((recipe) => (
           <div key={recipe.recipeId}>
             <SmallRecipeCard
+              variant="home"
               id={recipe.recipeId}
               title={recipe.name}
               description={recipe.description}
-                      imageUrl={recipe.image}
-                      cookable={
-                        title === "cookable"
-                          ? true
-                          : title === "not cookable"
-                            ? false
-                            : recipe.cookable
-                      }
-                    />
-                  </div>
-                ))}
+              imageUrl={recipe.image}
+              cookable={
+                title === "cookable"
+                  ? true
+                  : title === "not cookable"
+                    ? false
+                    : recipe.cookable
+              }
+            />
+          </div>
+        ))}
       </div>
     </div>
   );

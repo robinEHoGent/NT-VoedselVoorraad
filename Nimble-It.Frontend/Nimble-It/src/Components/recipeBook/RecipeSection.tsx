@@ -26,6 +26,7 @@ function RecipeSection({
         {recipes && recipes.length > 0 ? (
           recipes.map((recipe) => (
             <SmallRecipeCard
+              variant="home"
               key={recipe.recipeId}
               id={recipe.recipeId}
               title={recipe.name}
