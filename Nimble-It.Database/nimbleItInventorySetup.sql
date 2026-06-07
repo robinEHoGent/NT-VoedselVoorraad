@@ -94,107 +94,107 @@ INSERT INTO tags (name) VALUES
 ("Salad"), ("Healthy"), ("Sweet");                  -- 14-16: Other/Diet
 
 /* RECIPES */
-INSERT INTO recipes (name, description, prepare_time, complexity, serving_size, created_on, last_cooked, favorite) VALUES 
-("Spaghetti Bolognese", "Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.", 45, 2, 4, current_date() - INTERVAL 7 DAY, current_date() - INTERVAL 2 DAY, 1), -- 1
-("Greek Salad", "Fresh Mediterranean salad with feta cheese and olives.", 15, 1, 4, current_date() - INTERVAL 5 DAY, current_date() - INTERVAL 1 DAY, 1), -- 2
-("Chicken Stir Fry", "Quick and easy Asian-inspired chicken with colorful vegetables.", 25, 1, 2, current_date() - INTERVAL 5 DAY, NULL, 0), -- 3
-("Banana Pancakes", "Fluffy breakfast pancakes with fresh bananas and cinnamon.", 20, 1, 2, current_date() - INTERVAL 5 DAY, NULL, 0), -- 4
-("Cheesy Omelette", "Simple, classic omelette with melted cheese and butter.", 10, 1, 1, current_date() - INTERVAL 2 DAY, current_date(), 1), -- 5
-("Vegetable Soup", "Light, comforting vegetable soup with a clear broth.", 30, 1, 3, current_date(), NULL, 0), -- 6
-("Pasta Salad", "Cold pasta salad with fresh chopped veggies and a light vinaigrette.", 15, 1, 2, current_date(), NULL, 0), -- 7
-("Tomato Pasta", "Simple pasta with fresh tomato sauce and basil.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 8
-("Fried Rice", "Classic Asian fried rice with vegetables and egg.", 25, 1, 4, current_date() - INTERVAL 4 DAY, NULL, 1), -- 9
-("Chicken Salad", "Healthy chicken salad with mixed greens and light dressing.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 10
-("Veggie Burger", "Delicious vegetarian patty served on a bun with fresh toppings.", 30, 2, 4, current_date() - INTERVAL 6 DAY, current_date() - INTERVAL 1 DAY, 1), -- 11
-("Mushroom Risotto", "Creamy Italian risotto with mushrooms and Parmesan cheese.", 40, 2, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 12
-("Beef Tacos", "Spicy ground beef tacos with crunchy shells and fresh salsa.", 25, 1, 4, current_date() - INTERVAL 3 DAY, NULL, 1), -- 13
-("Chicken Curry", "Flavorful Indian-style chicken curry in a rich, creamy sauce.", 45, 2, 4, current_date() - INTERVAL 7 DAY, NULL, 0), -- 14
-("Caesar Salad", "Classic Caesar salad with romaine, croutons, and homemade dressing.", 15, 1, 2, current_date() - INTERVAL 1 DAY, NULL, 0), -- 15
-("Tomato Soup", "Creamy tomato soup perfect for lunch or a light dinner.", 30, 1, 4, current_date() - INTERVAL 4 DAY, NULL, 0), -- 16
-("Grilled Chicken", "Simple grilled chicken breast seasoned with herbs and spices.", 25, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 1), -- 17
-("Pasta Carbonara", "Traditional Italian pasta with eggs, cheese, cured pork, and black pepper.", 20, 2, 2, current_date() - INTERVAL 5 DAY, NULL, 0), -- 18
-("Vegetable Curry", "Spicy vegetable curry with coconut milk and a variety of vegetables.", 35, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 0), -- 19
-("Fish and Chips", "Classic British deep-fried battered fish served with thick-cut fried potatoes.", 40, 2, 4, current_date() - INTERVAL 8 DAY, current_date() - INTERVAL 3 DAY, 1), -- 20
-("Egg Fried Rice", "Quick egg fried rice with vegetables, ideal for leftovers.", 15, 1, 2, current_date() - INTERVAL 1 DAY, NULL, 0), -- 21
-("Chicken Parmesan", "Breaded chicken breast topped with tomato sauce and mozzarella, baked until bubbly.", 45, 2, 4, current_date() - INTERVAL 9 DAY, NULL, 1), -- 22
-("Veggie Pasta", "Light pasta dish tossed with seasonal fresh vegetables.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 23
-("Beef Stir Fry", "Quick beef stir fry with Asian flavors and crisp vegetables.", 25, 1, 4, current_date() - INTERVAL 4 DAY, NULL, 0), -- 24
-("Chicken Noodle Soup", "Comforting chicken noodle soup, a classic remedy.", 40, 2, 6, current_date() - INTERVAL 7 DAY, NULL, 1), -- 25
-("Caprese Salad", "Italian salad with sliced fresh mozzarella, tomatoes, and basil.", 10, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 26
-("Beef Burger", "Juicy beef burger patty served on a soft bun with lettuce and sauce.", 20, 1, 4, current_date() - INTERVAL 5 DAY, current_date() - INTERVAL 1 DAY, 1), -- 27
-("Chicken Tacos", "Spicy chicken tacos with fresh salsa, cilantro, and lime.", 25, 1, 4, current_date() - INTERVAL 3 DAY, NULL, 0), -- 28
-("Pasta Primavera", "Spring pasta with fresh seasonal vegetables and a light cream sauce.", 25, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 0), -- 29
-("Tomato Basil Pasta", "Simple pasta with tomatoes and fresh basil, a quick summer dish.", 20, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 30
-("Chicken Wings", "Crispy baked chicken wings tossed in a flavorful sauce.", 45, 2, 4, current_date() - INTERVAL 8 DAY, NULL, 1), -- 31
-("Veggie Stir Fry", "Healthy vegetable stir fry with tofu and soy sauce.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 32
-("Beef Curry", "Rich and spicy beef curry with deep, aromatic flavors.", 50, 3, 4, current_date() - INTERVAL 10 DAY, NULL, 0), -- 33
-("Chicken Soup", "Classic chicken soup with vegetables and herbs.", 35, 2, 6, current_date() - INTERVAL 7 DAY, NULL, 0), -- 34
-("Pasta Alfredo", "Creamy Alfredo pasta made with butter, heavy cream, and Parmesan cheese.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 1), -- 35
-("Greek Chicken", "Greek-style marinated chicken (souvlaki) served with lemon.", 30, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 0), -- 36
-("Veggie Wrap", "Healthy vegetable wrap packed with raw and cooked vegetables.", 10, 1, 1, current_date() - INTERVAL 1 DAY, NULL, 0), -- 37
-("Beef Pasta", "Hearty beef and pasta dish, often a casserole or baked dish.", 30, 2, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 38
-("Chicken Caesar Wrap", "Caesar salad ingredients wrapped in a soft tortilla.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 1), -- 39
-("Tomato Risotto", "Creamy tomato risotto using arborio rice and fresh tomato sauce.", 35, 2, 4, current_date() - INTERVAL 7 DAY, NULL, 0), -- 40
-("Beef Noodles", "Asian-style beef noodles tossed in a savory sauce with vegetables.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 0), -- 41
-("Chicken Sandwich", "Classic chicken sandwich with lettuce and mayonnaise.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 1), -- 42
-("Vegetable Lasagna", "Layered vegetable lasagna with creamy ricotta and cheese.", 60, 3, 6, current_date() - INTERVAL 12 DAY, NULL, 1), -- 43
-("Chicken Quesadilla", "Cheesy chicken quesadilla grilled until crispy.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 44
-("Beef Stroganoff", "Creamy beef stroganoff served over egg noodles.", 40, 2, 4, current_date() - INTERVAL 8 DAY, NULL, 0), -- 45
-("Greek Pasta", "Mediterranean pasta dish with tomatoes, feta, and herbs.", 25, 2, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 46
-("Chicken Fried Rice", "Chicken fried rice with vegetables and soy sauce.", 20, 1, 4, current_date() - INTERVAL 3 DAY, current_date(), 1), -- 47
-("Veggie Pizza", "Homemade vegetable pizza with a thin crust.", 40, 2, 4, current_date() - INTERVAL 9 DAY, NULL, 1), -- 48
-("Beef Bowl", "Asian beef bowl with rice and a savory glaze.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 0), -- 49
-("Chicken Wrap", "Grilled chicken wrap with mixed greens.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 50
-("Tomato Chicken", "Chicken baked in a simple tomato sauce.", 35, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 0), -- 51
-("Pasta Bake", "Baked pasta with ground meat and a cheesy top layer.", 45, 2, 6, current_date() - INTERVAL 8 DAY, NULL, 1), -- 52
-("Beef Salad", "Fresh beef salad with tender sliced steak.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 53
-("Chicken Pasta", "Simple chicken pasta tossed in a light sauce.", 25, 2, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 54
-("Veggie Bowl", "Healthy vegetable and grain bowl with a light dressing.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 1), -- 55
-("Beef Sandwich", "Hearty beef sandwich with melted cheese.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 56
-("Chicken Bowl", "Chicken and rice bowl with vegetables.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 0), -- 57
-("Greek Bowl", "Mediterranean bowl with chicken, rice, and tzatziki.", 20, 2, 2, current_date() - INTERVAL 3 DAY, NULL, 1), -- 58
-("Pasta Soup", "Pasta and vegetable soup (Minestrone style).", 30, 1, 4, current_date() - INTERVAL 6 DAY, NULL, 0), -- 59
-("Beef Rice", "Beef and rice dish (e.g., Pilaf or Biryani).", 30, 2, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 60
-("Chicken Salad Wrap", "Chicken salad mixture wrapped in a tortilla.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 61
-("Veggie Soup", "Mixed vegetable soup with a thick broth.", 30, 1, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 62
-("Beef Wrap", "Beef and vegetable wrap.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 1), -- 63
-("Chicken Nuggets", "Homemade chicken nuggets with a crispy coating.", 30, 2, 4, current_date() - INTERVAL 7 DAY, NULL, 1), -- 64
-("Greek Wrap", "Greek-style chicken or veggie wrap with fresh herbs.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 65
-("Pasta Salad Bowl", "Cold pasta salad bowl.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 66
-("Beef Taco Bowl", "Beef taco bowl with toppings like sour cream and salsa.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 0), -- 67
-("Chicken Burrito", "Chicken burrito with beans, rice, and cheese.", 25, 2, 2, current_date() - INTERVAL 5 DAY, NULL, 1), -- 68
-("Veggie Burrito", "Vegetarian burrito packed with black beans and corn.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 69
-("Beef Burrito", "Beef burrito with cheese and rice.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 0), -- 70
-("Chicken Fajitas", "Sizzling chicken fajitas served with warm tortillas.", 30, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 1), -- 71
-("Greek Pizza", "Greek-style pizza with feta, spinach, and olives.", 35, 2, 4, current_date() - INTERVAL 8 DAY, NULL, 0), -- 72
-("Pasta Frittata", "Italian pasta frittata (omelette with pasta).", 25, 2, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 73
-("Beef Kebabs", "Grilled beef kebabs with bell peppers and onions.", 30, 2, 4, current_date() - INTERVAL 7 DAY, NULL, 0), -- 74
-("Chicken Skewers", "Marinated chicken skewers (Shish Kebab style).", 30, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 1), -- 75
-("Veggie Skewers", "Grilled vegetable skewers with balsamic glaze.", 25, 1, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 76
-("Greek Chicken Bowl", "Greek chicken with rice, feta, and cucumber.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 0), -- 77
-("Pasta Carbonara Bowl", "Carbonara-style pasta served in a bowl.", 20, 2, 2, current_date() - INTERVAL 3 DAY, NULL, 1), -- 78
-("Beef Pho", "Vietnamese beef noodle soup with aromatic broth.", 60, 3, 4, current_date() - INTERVAL 15 DAY, NULL, 0), -- 79
-("Chicken Pho", "Vietnamese chicken soup with thin rice noodles.", 50, 3, 4, current_date() - INTERVAL 12 DAY, NULL, 0), -- 80
-("Veggie Pho", "Vegetarian pho with mushroom broth.", 45, 2, 4, current_date() - INTERVAL 10 DAY, NULL, 0), -- 81
-("Greek Gyros", "Greek gyros with meat, tomato, onion, and tzatziki wrapped in pita.", 30, 2, 4, current_date() - INTERVAL 7 DAY, NULL, 1), -- 82
-("Chicken Gyros", "Chicken gyros with vegetables.", 30, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 0), -- 83
-("Pasta Pesto", "Pasta with fresh basil pesto.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 1), -- 84
-("Beef Lasagna", "Classic beef lasagna with layered pasta, meat sauce, and cheese.", 75, 3, 8, current_date() - INTERVAL 14 DAY, NULL, 1), -- 85
-("Chicken Lasagna", "Creamy chicken lasagna with Alfredo sauce.", 70, 3, 8, current_date() - INTERVAL 13 DAY, NULL, 0), -- 86
-("Veggie Quesadilla", "Vegetable quesadilla with bell peppers and onion.", 15, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 87
-("Beef Quesadilla", "Beef and cheese quesadilla.", 20, 1, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 88
-("Greek Burger", "Greek-style lamb burger with feta and oregano.", 25, 2, 4, current_date() - INTERVAL 5 DAY, NULL, 0), -- 89
-("Chicken Schnitzel", "Crispy fried or baked chicken schnitzel.", 30, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 1), -- 90
-("Pasta Marinara", "Classic marinara pasta with simple tomato sauce.", 20, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 91
-("Beef Ramen", "Asian beef ramen noodles with rich broth and soft egg.", 30, 2, 2, current_date() - INTERVAL 5 DAY, NULL, 0), -- 92
-("Chicken Ramen", "Chicken ramen with rich broth, vegetables, and soft egg.", 30, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 1), -- 93
-("Veggie Ramen", "Vegetable ramen with mushroom broth and fresh greens.", 25, 2, 2, current_date() - INTERVAL 3 DAY, NULL, 0), -- 94
-("Greek Meatballs", "Greek-style meatballs (Keftedes) seasoned with herbs.", 35, 2, 4, current_date() - INTERVAL 7 DAY, NULL, 0), -- 95
-("Chicken Meatballs", "Chicken meatballs in a light sauce.", 35, 2, 4, current_date() - INTERVAL 6 DAY, NULL, 1), -- 96
-("Pasta Arrabiata", "Spicy tomato pasta with chili and garlic.", 20, 1, 2, current_date() - INTERVAL 2 DAY, NULL, 0), -- 97
-("Beef Teriyaki", "Japanese beef teriyaki with a sweet and savory glaze.", 25, 2, 2, current_date() - INTERVAL 4 DAY, NULL, 0), -- 98
-("Chicken Teriyaki", "Sweet and savory chicken teriyaki.", 25, 2, 2, current_date() - INTERVAL 3 DAY, NULL, 1), -- 99
-("Greek Moussaka", "Traditional Greek casserole with layered eggplant, meat sauce, and bechamel.", 90, 3, 8, current_date() - INTERVAL 20 DAY, current_date() - INTERVAL 5 DAY, 1); -- 100
+INSERT INTO recipes (name, description, prepare_time, complexity, serving_size, image_url, created_on, last_cooked, favorite) VALUES 
+("Spaghetti Bolognese", "Classic Italian pasta dish with rich meat sauce. Traditional recipe combining ground beef, tomatoes, and herbs.", 45, 2, 4, "/images/SpaghettiBolognese.jpg", current_date() - INTERVAL 7 DAY, current_date() - INTERVAL 2 DAY, 1), -- 1
+("Greek Salad", "Fresh Mediterranean salad with feta cheese and olives.", 15, 1, 4, "/images/GreekSalad.jpg", current_date() - INTERVAL 5 DAY, current_date() - INTERVAL 1 DAY, 1), -- 2
+("Chicken Stir Fry", "Quick and easy Asian-inspired chicken with colorful vegetables.", 25, 1, 2, "/images/ChickenStirFry.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 3
+("Banana Pancakes", "Fluffy breakfast pancakes with fresh bananas and cinnamon.", 20, 1, 2, "/images/Banana-Pancakes-13.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 4
+("Cheesy Omelette", "Simple, classic omelette with melted cheese and butter.", 10, 1, 1, "/images/Cheese_Omelette.png", current_date() - INTERVAL 2 DAY, current_date(), 1), -- 5
+("Vegetable Soup", "Light, comforting vegetable soup with a clear broth.", 30, 1, 3, "/images/VegetableSoup.jpg", current_date(), NULL, 0), -- 6
+("Pasta Salad", "Cold pasta salad with fresh chopped veggies and a light vinaigrette.", 15, 1, 2, "/images/PastaSalad.jpg", current_date(), NULL, 0), -- 7
+("Tomato Pasta", "Simple pasta with fresh tomato sauce and basil.", 20, 1, 2, "/images/TomatoPasta.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 8
+("Fried Rice", "Classic Asian fried rice with vegetables and egg.", 25, 1, 4, "/images/FriedRice.jpg", current_date() - INTERVAL 4 DAY, NULL, 1), -- 9
+("Chicken Salad", "Healthy chicken salad with mixed greens and light dressing.", 15, 1, 2, "/images/ChickenSalad.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 10
+("Veggie Burger", "Delicious vegetarian patty served on a bun with fresh toppings.", 30, 2, 4, "/images/VeggieBurger.jpg", current_date() - INTERVAL 6 DAY, current_date() - INTERVAL 1 DAY, 1), -- 11
+("Mushroom Risotto", "Creamy Italian risotto with mushrooms and Parmesan cheese.", 40, 2, 4, "/images/MushroomRisotto.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 12
+("Beef Tacos", "Spicy ground beef tacos with crunchy shells and fresh salsa.", 25, 1, 4, "/images/BeefTacos.jpg", current_date() - INTERVAL 3 DAY, NULL, 1), -- 13
+("Chicken Curry", "Flavorful Indian-style chicken curry in a rich, creamy sauce.", 45, 2, 4, "/images/ChickenCurry.jpg", current_date() - INTERVAL 7 DAY, NULL, 0), -- 14
+("Caesar Salad", "Classic Caesar salad with romaine, croutons, and homemade dressing.", 15, 1, 2, "/images/Caeser_Salad.jpg", current_date() - INTERVAL 1 DAY, NULL, 0), -- 15
+("Tomato Soup", "Creamy tomato soup perfect for lunch or a light dinner.", 30, 1, 4, "/images/TomatoSoup.jpg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 16
+("Grilled Chicken", "Simple grilled chicken breast seasoned with herbs and spices.", 25, 1, 2, "/images/GrilledChicken.jpg", current_date() - INTERVAL 2 DAY, NULL, 1), -- 17
+("Pasta Carbonara", "Traditional Italian pasta with eggs, cheese, cured pork, and black pepper.", 20, 2, 2, "/images/PastaCarbonara.png", current_date() - INTERVAL 5 DAY, NULL, 0), -- 18
+("Vegetable Curry", "Spicy vegetable curry with coconut milk and a variety of vegetables.", 35, 2, 4, "/images/VegetableCurry.jpg", current_date() - INTERVAL 6 DAY, NULL, 0), -- 19
+("Fish and Chips", "Classic British deep-fried battered fish served with thick-cut fried potatoes.", 40, 2, 4, "/images/FishAndChips.png", current_date() - INTERVAL 8 DAY, current_date() - INTERVAL 3 DAY, 1), -- 20
+("Egg Fried Rice", "Quick egg fried rice with vegetables, ideal for leftovers.", 15, 1, 2, "/images/EggFriedRice.jpg", current_date() - INTERVAL 1 DAY, NULL, 0), -- 21
+("Chicken Parmesan", "Breaded chicken breast topped with tomato sauce and mozzarella, baked until bubbly.", 45, 2, 4, "/images/ChickenParmesan.jpg", current_date() - INTERVAL 9 DAY, NULL, 1), -- 22
+("Veggie Pasta", "Light pasta dish tossed with seasonal fresh vegetables.", 20, 1, 2, "/images/VeggiePasta.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 23
+("Beef Stir Fry", "Quick beef stir fry with Asian flavors and crisp vegetables.", 25, 1, 4, "/images/BeefStirFry.jpg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 24
+("Chicken Noodle Soup", "Comforting chicken noodle soup, a classic remedy.", 40, 2, 6, "/images/ChickenNoodleSoup.jpg", current_date() - INTERVAL 7 DAY, NULL, 1), -- 25
+("Caprese Salad", "Italian salad with sliced fresh mozzarella, tomatoes, and basil.", 10, 1, 2, "/images/CapreseSalad.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 26
+("Beef Burger", "Juicy beef burger patty served on a soft bun with lettuce and sauce.", 20, 1, 4, "/images/BeefBurger.jpg", current_date() - INTERVAL 5 DAY, current_date() - INTERVAL 1 DAY, 1), -- 27
+("Chicken Tacos", "Spicy chicken tacos with fresh salsa, cilantro, and lime.", 25, 1, 4, "/images/ChickenTacos.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 28
+("Pasta Primavera", "Spring pasta with fresh seasonal vegetables and a light cream sauce.", 25, 2, 4, "/images/PastaPrimavera.jpg", current_date() - INTERVAL 6 DAY, NULL, 0), -- 29
+("Tomato Basil Pasta", "Simple pasta with tomatoes and fresh basil, a quick summer dish.", 20, 1, 2, "/images/TomatoBasilPasta.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 30
+("Chicken Wings", "Crispy baked chicken wings tossed in a flavorful sauce.", 45, 2, 4, "/images/ChickenWings.jpg", current_date() - INTERVAL 8 DAY, NULL, 1), -- 31
+("Veggie Stir Fry", "Healthy vegetable stir fry with tofu and soy sauce.", 20, 1, 2, "/images/VeggieStirFry.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 32
+("Beef Curry", "Rich and spicy beef curry with deep, aromatic flavors.", 50, 3, 4, "/images/BeefCurry.jpg", current_date() - INTERVAL 10 DAY, NULL, 0), -- 33
+("Chicken Soup", "Classic chicken soup with vegetables and herbs.", 35, 2, 6, "/images/ChickenSoup.jpg", current_date() - INTERVAL 7 DAY, NULL, 0), -- 34
+("Pasta Alfredo", "Creamy Alfredo pasta made with butter, heavy cream, and Parmesan cheese.", 25, 2, 2, "/images/PastaAlfredo.jpg", current_date() - INTERVAL 4 DAY, NULL, 1), -- 35
+("Greek Chicken", "Greek-style marinated chicken (souvlaki) served with lemon.", 30, 2, 4, "/images/GreekChicken.jpg", current_date() - INTERVAL 6 DAY, NULL, 0), -- 36
+("Veggie Wrap", "Healthy vegetable wrap packed with raw and cooked vegetables.", 10, 1, 1, "/images/VeggieWrap.png", current_date() - INTERVAL 1 DAY, NULL, 0), -- 37
+("Beef Pasta", "Hearty beef and pasta dish, often a casserole or baked dish.", 30, 2, 4, "/images/BeefPasta.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 38
+("Chicken Caesar Wrap", "Caesar salad ingredients wrapped in a soft tortilla.", 15, 1, 2, "/images/Chicken_Caeser_Wraps.jpg", current_date() - INTERVAL 2 DAY, NULL, 1), -- 39
+("Tomato Risotto", "Creamy tomato risotto using arborio rice and fresh tomato sauce.", 35, 2, 4, "/images/TomatoRisotto.jpg", current_date() - INTERVAL 7 DAY, NULL, 0), -- 40
+("Beef Noodles", "Asian-style beef noodles tossed in a savory sauce with vegetables.", 25, 2, 2, "/images/BeefNoodles.jpg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 41
+("Chicken Sandwich", "Classic chicken sandwich with lettuce and mayonnaise.", 15, 1, 2, "/images/ChickenSandwich.jpg", current_date() - INTERVAL 2 DAY, NULL, 1), -- 42
+("Vegetable Lasagna", "Layered vegetable lasagna with creamy ricotta and cheese.", 60, 3, 6, "/images/VegetableLasagne.jpg", current_date() - INTERVAL 12 DAY, NULL, 1), -- 43
+("Chicken Quesadilla", "Cheesy chicken quesadilla grilled until crispy.", 20, 1, 2, "/images/ChickenQuesadilla.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 44
+("Beef Stroganoff", "Creamy beef stroganoff served over egg noodles.", 40, 2, 4, "/images/BeefStroganoff.jpg", current_date() - INTERVAL 8 DAY, NULL, 0), -- 45
+("Greek Pasta", "Mediterranean pasta dish with tomatoes, feta, and herbs.", 25, 2, 4, "/images/GreekPasta.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 46
+("Chicken Fried Rice", "Chicken fried rice with vegetables and soy sauce.", 20, 1, 4, "/images/ChickenFriedRice.jpg", current_date() - INTERVAL 3 DAY, current_date(), 1), -- 47
+("Veggie Pizza", "Homemade vegetable pizza with a thin crust.", 40, 2, 4, "/images/VeggiePizza.jpg", current_date() - INTERVAL 9 DAY, NULL, 1), -- 48
+("Beef Bowl", "Asian beef bowl with rice and a savory glaze.", 25, 2, 2, "/images/BeefBowl.png", current_date() - INTERVAL 4 DAY, NULL, 0), -- 49
+("Chicken Wrap", "Grilled chicken wrap with mixed greens.", 15, 1, 2, "/images/ChickenWrap.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 50
+("Tomato Chicken", "Chicken baked in a simple tomato sauce.", 35, 2, 4, "/images/TomatoChicken.jpg", current_date() - INTERVAL 6 DAY, NULL, 0), -- 51
+("Pasta Bake", "Baked pasta with ground meat and a cheesy top layer.", 45, 2, 6, "/images/PastaBake.jpg", current_date() - INTERVAL 8 DAY, NULL, 1), -- 52
+("Beef Salad", "Fresh beef salad with tender sliced steak.", 15, 1, 2, "/images/BeefSalad.jpeg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 53
+("Chicken Pasta", "Simple chicken pasta tossed in a light sauce.", 25, 2, 4, "/images/ChickenPasta.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 54
+("Veggie Bowl", "Healthy vegetable and grain bowl with a light dressing.", 20, 1, 2, "/images/VeggieBowl.jpg", current_date() - INTERVAL 3 DAY, NULL, 1), -- 55
+("Beef Sandwich", "Hearty beef sandwich with melted cheese.", 15, 1, 2, "/images/BeefSandwich.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 56
+("Chicken Bowl", "Chicken and rice bowl with vegetables.", 25, 2, 2, "/images/ChickenBowl.jpg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 57
+("Greek Bowl", "Mediterranean bowl with chicken, rice, and tzatziki.", 20, 2, 2, "/images/GreekBowl.jpg", current_date() - INTERVAL 3 DAY, NULL, 1), -- 58
+("Pasta Soup", "Pasta and vegetable soup (Minestrone style).", 30, 1, 4, "/images/PastaSoup.jpg", current_date() - INTERVAL 6 DAY, NULL, 0), -- 59
+("Beef Rice", "Beef and rice dish (e.g., Pilaf or Biryani).", 30, 2, 4, "/images/BeefRice.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 60
+("Chicken Salad Wrap", "Chicken salad mixture wrapped in a tortilla.", 15, 1, 2, "/images/ChickenSaladWrap.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 61
+("Veggie Soup", "Mixed vegetable soup with a thick broth.", 30, 1, 4, "/images/VeggieSoup.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 62
+("Beef Wrap", "Beef and vegetable wrap.", 15, 1, 2, "/images/BeefWrap.jpeg", current_date() - INTERVAL 2 DAY, NULL, 1), -- 63
+("Chicken Nuggets", "Homemade chicken nuggets with a crispy coating.", 30, 2, 4, "/images/ChickenNuggets.jpg", current_date() - INTERVAL 7 DAY, NULL, 1), -- 64
+("Greek Wrap", "Greek-style chicken or veggie wrap with fresh herbs.", 15, 1, 2, "/images/GreekWrap.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 65
+("Pasta Salad Bowl", "Cold pasta salad bowl.", 20, 1, 2, "/images/PastaSaladBowl.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 66
+("Beef Taco Bowl", "Beef taco bowl with toppings like sour cream and salsa.", 25, 2, 2, "/images/BeefTacoBowl.jpg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 67
+("Chicken Burrito", "Chicken burrito with beans, rice, and cheese.", 25, 2, 2, "/images/ChickenBurrito.jpg", current_date() - INTERVAL 5 DAY, NULL, 1), -- 68
+("Veggie Burrito", "Vegetarian burrito packed with black beans and corn.", 20, 1, 2, "/images/VeggieBurrito.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 69
+("Beef Burrito", "Beef burrito with cheese and rice.", 25, 2, 2, "/images/BeefBurrito.jpeg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 70
+("Chicken Fajitas", "Sizzling chicken fajitas served with warm tortillas.", 30, 2, 4, "/images/ChickenFajitas.jpg", current_date() - INTERVAL 6 DAY, NULL, 1), -- 71
+("Greek Pizza", "Greek-style pizza with feta, spinach, and olives.", 35, 2, 4, "/images/GreekPizza.jpg", current_date() - INTERVAL 8 DAY, NULL, 0), -- 72
+("Pasta Frittata", "Italian pasta frittata (omelette with pasta).", 25, 2, 4, "/images/PastaFrittata.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 73
+("Beef Kebabs", "Grilled beef kebabs with bell peppers and onions.", 30, 2, 4, "/images/BeefKebabs.jpeg", current_date() - INTERVAL 7 DAY, NULL, 0), -- 74
+("Chicken Skewers", "Marinated chicken skewers (Shish Kebab style).", 30, 2, 4, "/images/ChickenSkewers.jpg", current_date() - INTERVAL 6 DAY, NULL, 1), -- 75
+("Veggie Skewers", "Grilled vegetable skewers with balsamic glaze.", 25, 1, 4, "/images/VeggieSkewers.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 76
+("Greek Chicken Bowl", "Greek chicken with rice, feta, and cucumber.", 25, 2, 2, "/images/GreekChickenBowl.jpg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 77
+("Pasta Carbonara Bowl", "Carbonara-style pasta served in a bowl.", 20, 2, 2, "/images/PastaCarbonaraBowl.jpg", current_date() - INTERVAL 3 DAY, NULL, 1), -- 78
+("Beef Pho", "Vietnamese beef noodle soup with aromatic broth.", 60, 3, 4, "/images/BeefPho.jpg", current_date() - INTERVAL 15 DAY, NULL, 0), -- 79
+("Chicken Pho", "Vietnamese chicken soup with thin rice noodles.", 50, 3, 4, "/images/ChickenPho.jpg", current_date() - INTERVAL 12 DAY, NULL, 0), -- 80
+("Veggie Pho", "Vegetarian pho with mushroom broth.", 45, 2, 4, "/images/VeggiePho.jpg", current_date() - INTERVAL 10 DAY, NULL, 0), -- 81
+("Greek Gyros", "Greek gyros with meat, tomato, onion, and tzatziki wrapped in pita.", 30, 2, 4, "/images/GreekGyros.jpg", current_date() - INTERVAL 7 DAY, NULL, 1), -- 82
+("Chicken Gyros", "Chicken gyros with vegetables.", 30, 2, 4, "/images/ChickenGyros.jpg", current_date() - INTERVAL 6 DAY, NULL, 0), -- 83
+("Pasta Pesto", "Pasta with fresh basil pesto.", 20, 1, 2, "/images/PastaPesto.jpg", current_date() - INTERVAL 3 DAY, NULL, 1), -- 84
+("Beef Lasagna", "Classic beef lasagna with layered pasta, meat sauce, and cheese.", 75, 3, 8, "/images/BeefLasagne.jpg", current_date() - INTERVAL 14 DAY, NULL, 1), -- 85
+("Chicken Lasagna", "Creamy chicken lasagna with Alfredo sauce.", 70, 3, 8, "/images/ChickenLasagne.jpg", current_date() - INTERVAL 13 DAY, NULL, 0), -- 86
+("Veggie Quesadilla", "Vegetable quesadilla with bell peppers and onion.", 15, 1, 2, "/images/VeggieQuesadilla.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 87
+("Beef Quesadilla", "Beef and cheese quesadilla.", 20, 1, 2, "/images/BeefQuesadilla.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 88
+("Greek Burger", "Greek-style lamb burger with feta and oregano.", 25, 2, 4, "/images/GreekBurger.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 89
+("Chicken Schnitzel", "Crispy fried or baked chicken schnitzel.", 30, 2, 4, "/images/ChickenSchnitzel.jpg", current_date() - INTERVAL 6 DAY, NULL, 1), -- 90
+("Pasta Marinara", "Classic marinara pasta with simple tomato sauce.", 20, 1, 2, "/images/PastaMarinara.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 91
+("Beef Ramen", "Asian beef ramen noodles with rich broth and soft egg.", 30, 2, 2, "/images/BeefRamen.jpg", current_date() - INTERVAL 5 DAY, NULL, 0), -- 92
+("Chicken Ramen", "Chicken ramen with rich broth, vegetables, and soft egg.", 30, 2, 2, "/images/ChickenRamen.jpg", current_date() - INTERVAL 4 DAY, NULL, 1), -- 93
+("Veggie Ramen", "Vegetable ramen with mushroom broth and fresh greens.", 25, 2, 2, "/images/VeggieRamen.jpg", current_date() - INTERVAL 3 DAY, NULL, 0), -- 94
+("Greek Meatballs", "Greek-style meatballs (Keftedes) seasoned with herbs.", 35, 2, 4, "/images/GreekMeatballs.jpg", current_date() - INTERVAL 7 DAY, NULL, 0), -- 95
+("Chicken Meatballs", "Chicken meatballs in a light sauce.", 35, 2, 4, "/images/ChickenMeatballs.jpg", current_date() - INTERVAL 6 DAY, NULL, 1), -- 96
+("Pasta Arrabiata", "Spicy tomato pasta with chili and garlic.", 20, 1, 2, "/images/PastaArrabiata.jpg", current_date() - INTERVAL 2 DAY, NULL, 0), -- 97
+("Beef Teriyaki", "Japanese beef teriyaki with a sweet and savory glaze.", 25, 2, 2, "/images/BeefTeriyaki.jpg", current_date() - INTERVAL 4 DAY, NULL, 0), -- 98
+("Chicken Teriyaki", "Sweet and savory chicken teriyaki.", 25, 2, 2, "/images/ChickenTeriyaki.jpeg", current_date() - INTERVAL 3 DAY, NULL, 1), -- 99
+("Greek Moussaka", "Traditional Greek casserole with layered eggplant, meat sauce, and bechamel.", 90, 3, 8, "/images/GreekMoussaka.jpg", current_date() - INTERVAL 20 DAY, current_date() - INTERVAL 5 DAY, 1); -- 100
 
 -- ----------------------------------------------------
 -- 4. RECIPE METADATA (Tags, Ingredients, Instructions)
