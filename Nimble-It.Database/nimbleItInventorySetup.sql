@@ -38,16 +38,16 @@ INSERT INTO units_of_measurement (name) VALUES
 -- ----------------------------------------------------
 
 /* PRODUCTS */
-INSERT INTO products (name, category_id, uom_id) VALUES
-( "Paprika", 1, 3), ( "Eggs", 3, 3), ( "Milk", 3, 2), ( "Carero", 2, 1),
-( "Carrots", 1, 3), ( "Tomatoes", 1, 3), ( "Chicken Breast", 2, 1), ( "Ground Beef", 2, 1),
-( "Cheese", 3, 4), ( "Yogurt", 3, 5), ( "Apples", 4, 3), ( "Bananas", 4, 3),
-( "Oranges", 4, 3), ( "Rice", 5, 1), ( "Pasta", 5, 1), ( "Bread", 5, 3),
-( "Orange Juice", 6, 2), ( "Coffee", 6, 4), ( "Tea", 6, 4), ( "Tomato Sauce", 9, 5),
-( "Onion", 1, 3), ( "Garlic", 10, 6), ( "Salt", 10, 4), ( "Soy Sauce", 9, 5),
-( "Peas", 1, 4), ( "Sugar", 11, 4), ( "Cinnamon", 10, 4), ( "Butter", 3, 4),
-( "Berries", 4, 4), ( "Cream", 3, 4), ( "Tofu", 8, 4), ( "Mushrooms", 1, 4),
-( "Bell Pepper", 1, 3); -- Product IDs 1 - 33
+INSERT INTO products (name, category_id, uom_id, image_url) VALUES
+( "Paprika", 1, 3, "/images/Paprika.png"), ( "Eggs", 3, 3, "/images/Eggs.jpg"), ( "Milk", 3, 2, "/images/Milk.jpeg"), ( "Carero", 2, 1, "/images/Carero.jpg"),
+( "Carrots", 1, 3, "/images/Carrots.png"), ( "Tomatoes", 1, 3, "/images/Tomatoes.jpg"), ( "Chicken Breast", 2, 1, "/images/ChickenBreast.png"), ( "Ground Beef", 2, 1, "/images/GroundBeef.jpg"),
+( "Cheese", 3, 4, "/images/Cheese.jpg"), ( "Yogurt", 3, 5, "/images/Yogurt.jpg"), ( "Apples", 4, 3, "/images/Apples.png"), ( "Bananas", 4, 3, "/images/Bananas.png"),
+( "Oranges", 4, 3, "/images/Oranges.jpg"), ( "Rice", 5, 1, "/images/Rice.jpg"), ( "Pasta", 5, 1, "/images/Pasta.jpeg"), ( "Bread", 5, 3, "/images/Bread.jpeg"),
+( "Orange Juice", 6, 2, "/images/OrangeJuice.jpg"), ( "Coffee", 6, 4, "/images/Coffee.jpg"), ( "Tea", 6, 4, "/images/Tea.jpg"), ( "Tomato Sauce", 9, 5, "/images/TomatoSauce.jpg"),
+( "Onion", 1, 3, "/images/Onion.jpg"), ( "Garlic", 10, 6, "/images/Garlic.jpg"), ( "Salt", 10, 4, "/images/Salt.jpeg"), ( "Soy Sauce", 9, 5, "/images/SoySauce.jpg"),
+( "Peas", 1, 4, "/images/Peas.jpg"), ( "Sugar", 11, 4, "/images/Sugar.jpg"), ( "Cinnamon", 10, 4, "/images/Cinnamon.jpg"), ( "Butter", 3, 4, "/images/Butter.jpg"),
+( "Berries", 4, 4, "/images/Berries.jpg"), ( "Cream", 3, 4, "/images/Cream.jpg"), ( "Tofu", 8, 4, "/images/Tofu.jpeg"), ( "Mushrooms", 1, 4, "/images/Mushrooms.jpg"),
+( "Bell Pepper", 1, 3, "/images/BellPepper.jpeg"); -- Product IDs 1 - 33
 
 /* INVENTORY */
 INSERT INTO inventories (product_id, amount, purchase_date, expiry_date, storage_type_id) VALUES
